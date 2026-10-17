@@ -1,0 +1,267 @@
+{
+  "total_calls": 175,
+  "completed_steps": {
+    "02_WorkSpace": {
+      "tool_name": "arcpy.management.CreateFileGDB",
+      "execution_id": "32fe47f8-63a4-499d-b898-b0d8dc3f3511",
+      "timestamp": "2026-10-16T17:51:05.374067"
+    },
+    "江屯镇评价": {
+      "tool_name": "arcpy.management.CreateFileGDB",
+      "execution_id": "32fe47f8-63a4-499d-b898-b0d8dc3f3511",
+      "timestamp": "2026-10-16T17:51:05.374067"
+    },
+    "耕地底图": {
+      "tool_name": "arcpy.analysis.Select",
+      "execution_id": "57cab87e-733a-43a7-a87b-c4851179a324",
+      "timestamp": "2026-10-16T17:51:51.843296"
+    },
+    "土壤图_4525": {
+      "tool_name": "arcpy.management.Project",
+      "execution_id": "88375d20-e084-4637-8ef4-610973abe468",
+      "timestamp": "2026-10-16T17:52:32.310523"
+    },
+    "土种对照表": {
+      "tool_name": "arcpy.conversion.ExcelToTable",
+      "execution_id": "6d708730-f8a8-4c2a-b4e9-d3e83e649499",
+      "timestamp": "2026-10-16T17:55:09.727064"
+    },
+    "评价单元": {
+      "tool_name": "arcpy.analysis.SpatialJoin",
+      "execution_id": "9fa8d5be-748b-4448-be61-99de0c59303f",
+      "timestamp": "2026-10-16T17:56:33.418758"
+    },
+    "pH_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "b4ffdc80-1cf2-42c6-b3ba-0cb774a4bdaa",
+      "timestamp": "2026-10-16T18:18:14.842326"
+    },
+    "YJZ_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "66782fa4-bbc8-46ed-8c69-16b13e2817d2",
+      "timestamp": "2026-10-16T18:18:45.408469"
+    },
+    "TRRZ_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "28038368-63da-4768-9a87-ac1992f56a0b",
+      "timestamp": "2026-10-16T18:19:16.575940"
+    },
+    "zstat_pH": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "c403c7ec-c978-48f1-b0ab-7634bf19bad3",
+      "timestamp": "2026-10-16T18:21:25.037333"
+    },
+    "zstat_YJZ": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "f1a9f5a1-a726-470c-9456-6ebf85eb4748",
+      "timestamp": "2026-10-16T18:22:35.058617"
+    },
+    "zstat_TRRZ": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "9458d792-074c-464a-adc8-bc3d6cc54ed6",
+      "timestamp": "2026-10-16T18:23:03.398146"
+    },
+    "zstat_YXL": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "c0af7041-ebee-4289-b41d-4b248025e84f",
+      "timestamp": "2026-10-16T18:33:36.416704"
+    },
+    "zstat_SXJ": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "a4e51bd8-9d8c-405f-90a3-1eb16393d71a",
+      "timestamp": "2026-10-16T18:34:20.417503"
+    },
+    "zstat_GCHD": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "6fad6e21-3bbb-4c95-8bc4-158a180dc61c",
+      "timestamp": "2026-10-16T18:34:51.005743"
+    },
+    "NL_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "af184407-8121-41b8-ba29-9e88c8661de2",
+      "timestamp": "2026-10-16T18:43:16.076702"
+    },
+    "FL_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "30f2af83-6b30-456d-b174-77d6b1859847",
+      "timestamp": "2026-10-16T18:43:58.327703"
+    },
+    "SL1_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "ada98484-aa01-43b7-81dd-abf56e36f80c",
+      "timestamp": "2026-10-16T18:44:42.094181"
+    },
+    "SL2_4525": {
+      "tool_name": "arcpy.management.ProjectRaster",
+      "execution_id": "9c880cfb-e55a-44ec-a392-075329e05981",
+      "timestamp": "2026-10-16T18:45:16.917008"
+    },
+    "zstat_NL": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "3c57c18a-06ed-42e7-b784-9079e5f7c659",
+      "timestamp": "2026-10-16T18:46:50.417376"
+    },
+    "zstat_FL": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "4125580f-9e55-4137-9d87-45298a3f25b5",
+      "timestamp": "2026-10-16T18:47:43.472456"
+    },
+    "zstat_SL1": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "a21af5ec-ec3e-4ebc-a646-8a0b6ee0ff15",
+      "timestamp": "2026-10-16T18:49:21.397884"
+    },
+    "zstat_SL2": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "bdbac565-efc4-4b11-9c5a-9c8c61a7466e",
+      "timestamp": "2026-10-16T18:50:03.113094"
+    },
+    "trrz_stat": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "4cbab74c-4a20-49da-af8a-0ec2edb22b24",
+      "timestamp": "2026-10-16T18:59:02.330545"
+    },
+    "clay_stat": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "4b0b6774-f698-4708-88d1-98a7817160ae",
+      "timestamp": "2026-10-16T19:02:04.238390"
+    },
+    "silt_stat": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "0c15f32f-9931-40a2-b027-21308abcc3b3",
+      "timestamp": "2026-10-16T19:02:29.148642"
+    },
+    "sand1_stat": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "9b36b3e2-88a7-4a98-b699-3a35928662e3",
+      "timestamp": "2026-10-16T19:02:55.794845"
+    },
+    "sand2_stat": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "b8294089-c972-4ac1-97f3-b4a570f9367e",
+      "timestamp": "2026-10-16T19:03:20.938102"
+    },
+    "DEM_focal_mean": {
+      "tool_name": "arcpy.sa.FocalStatistics",
+      "execution_id": "aac5aa28-eb8c-492a-a371-bdc970d17ab3",
+      "timestamp": "2026-10-16T19:08:45.892526"
+    },
+    "DEM_slope": {
+      "tool_name": "arcpy.ddd.Slope",
+      "execution_id": "1d4e9348-d7ef-41fc-a36f-74360e226072",
+      "timestamp": "2026-10-16T19:13:10.006395"
+    },
+    "DEM_TPI": {
+      "tool_name": "arcpy.sa.RasterCalculator",
+      "execution_id": "6210c547-b384-4882-80fa-d1e2d2cb6e52",
+      "timestamp": "2026-10-16T19:15:20.210424"
+    },
+    "DEM_agg300": {
+      "tool_name": "arcpy.management.Aggregate",
+      "execution_id": "7ba37cf5-9295-4ccb-a811-486397ac3825",
+      "timestamp": "2026-10-16T19:17:43.039718"
+    },
+    "DEM_reg300": {
+      "tool_name": "arcpy.management.Resample",
+      "execution_id": "3553dbd3-243a-4568-980c-1db4f5012036",
+      "timestamp": "2026-10-16T19:18:56.070434"
+    },
+    "zstat_DEM": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "577562d4-c1c1-4f52-97cf-0c8162cf6805",
+      "timestamp": "2026-10-16T19:19:35.144842"
+    },
+    "DEM_reg300_30m": {
+      "tool_name": "arcpy.management.Resample",
+      "execution_id": "17b5a41f-81f1-4081-8ee8-9a7f50d5395f",
+      "timestamp": "2026-10-16T19:20:31.507967"
+    },
+    "zstat_REG300": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "ea2c0ab3-cf9f-4d18-8640-e52ca2fe63ff",
+      "timestamp": "2026-10-16T19:21:05.458785"
+    },
+    "zstat_SLOPE": {
+      "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+      "execution_id": "534416df-379f-477e-b5af-422cdf9501ea",
+      "timestamp": "2026-10-16T19:21:31.642039"
+    },
+    "高标_4525": {
+      "tool_name": "arcpy.management.Project",
+      "execution_id": "0c105770-0fed-49cd-ae12-926684906e31",
+      "timestamp": "2026-10-16T19:34:57.378266"
+    },
+    "河流": {
+      "tool_name": "arcpy.analysis.Select",
+      "execution_id": "27975aac-db19-48e9-9f79-8ab3b2964e90",
+      "timestamp": "2026-10-16T19:35:25.553411"
+    },
+    "沟渠": {
+      "tool_name": "arcpy.analysis.Select",
+      "execution_id": "846114a2-5365-4b75-aa1c-4b7bf5885487",
+      "timestamp": "2026-10-16T19:35:47.432099"
+    },
+    "GCZD_freq": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "272334de-7645-462d-ab03-2f3b041cec91",
+      "timestamp": "2026-10-16T19:49:27.319292"
+    },
+    "DXBW_freq": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "d49ed60d-8c12-4a21-b1be-bcf37fef89f5",
+      "timestamp": "2026-10-16T19:59:19.119499"
+    },
+    "SZYTJ_freq": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "102764de-89a5-4187-8603-9281915e3d5a",
+      "timestamp": "2026-10-16T20:00:10.025919"
+    },
+    "PSNL_freq": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "e29ceb97-f857-40f2-834f-98adc6324a9b",
+      "timestamp": "2026-10-16T20:00:49.919925"
+    },
+    "zhzs_stat": {
+      "tool_name": "arcpy.analysis.Statistics",
+      "execution_id": "30608ea0-5800-4e24-a04b-e2a1fdd53ec5",
+      "timestamp": "2026-10-16T20:28:23.886583"
+    },
+    "zldj_freq": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "5139e274-4f99-4306-ab3d-0abc076584c0",
+      "timestamp": "2026-10-16T20:28:44.773380"
+    },
+    "4数据库成果": {
+      "tool_name": "arcpy.management.CreateFileGDB",
+      "execution_id": "2e2dd29d-5609-405a-9aed-c340526c3cf3",
+      "timestamp": "2026-10-16T20:34:49.530105"
+    },
+    "441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库": {
+      "tool_name": "arcpy.management.CreateFileGDB",
+      "execution_id": "2e2dd29d-5609-405a-9aed-c340526c3cf3",
+      "timestamp": "2026-10-16T20:34:49.530105"
+    },
+    "PJDYT": {
+      "tool_name": "arcpy.management.CopyFeatures",
+      "execution_id": "1c89c62c-c654-4940-bef5-6ae364e6e7ec",
+      "timestamp": "2026-10-16T20:42:13.717083"
+    },
+    "freq_zldj": {
+      "tool_name": "arcpy.analysis.Frequency",
+      "execution_id": "9cad8768-0be5-40af-afb5-daf7c692bb5d",
+      "timestamp": "2026-10-16T20:52:53.080886"
+    },
+    "stats_fields": {
+      "tool_name": "arcpy.analysis.Statistics",
+      "execution_id": "0f130a60-fdb4-4b2b-9acf-d7bd763299c4",
+      "timestamp": "2026-10-16T20:53:58.369504"
+    }
+  },
+  "last_execution": {
+    "execution_id": "1bd548aa-b121-405f-b5a9-f7b5897db188",
+    "timestamp": "2026-10-16T21:02:07.761879",
+    "tool_name": "arcpy.GetInstallInfo",
+    "input_paths": [],
+    "output_paths": []
+  }
+}

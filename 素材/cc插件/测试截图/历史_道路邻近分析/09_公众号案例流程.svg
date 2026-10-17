@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1990" viewBox="0 0 1080 1990">
+<rect width="1080" height="1990" fill="#f1f7f8"/>
+<rect x="0" y="0" width="1080" height="220" rx="0" fill="#173e4a"/>
+<text x="54" y="30" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="26" font-weight="700" fill="#7eddd0">LINKTOOL / 场景流程</text>
+<text x="54" y="78" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="48" font-weight="700" fill="#ffffff">从道路数据到分析成果</text>
+<text x="54" y="155" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#d5e8ed">同一业务目标，对应明确的角色与工具</text>
+<rect x="54" y="256" width="972" height="220" rx="20" fill="#deefed"/>
+<text x="78" y="272" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">01  理解需求并安排任务</text>
+<text x="78" y="321" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">任务规划 · @task-plan</text>
+<text x="78" y="369" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">明确20米邻近范围、研究边界与预期成果</text>
+<text x="78" y="419" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">工作流：组织分析步骤与交接</text>
+<polyline points="540,482 540,502" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,502 531,488 549,488" fill="#008f88"/>
+<rect x="54" y="506" width="972" height="220" rx="20" fill="#ffffff"/>
+<text x="78" y="522" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">02  核对道路与遥感底图</text>
+<text x="78" y="571" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">GIS执行 · @gis-tool</text>
+<text x="78" y="619" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">识别36条道路线，核对空间位置与属性</text>
+<text x="78" y="669" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">工具连接：arcgis-mcp-server</text>
+<polyline points="540,732 540,752" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,752 531,738 549,738" fill="#008f88"/>
+<rect x="54" y="756" width="972" height="220" rx="20" fill="#deefed"/>
+<text x="78" y="772" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">03  生成邻近范围并限定边界</text>
+<text x="78" y="821" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">GIS执行 · @gis-tool</text>
+<text x="78" y="869" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">20米测地线缓冲 → 合并重叠 → 按研究区裁剪</text>
+<text x="78" y="919" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">工具连接：arcgis-mcp-server</text>
+<polyline points="540,982 540,1002" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,1002 531,988 549,988" fill="#008f88"/>
+<rect x="54" y="1006" width="972" height="220" rx="20" fill="#ffffff"/>
+<text x="78" y="1022" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">04  计算面积并核查结果</text>
+<text x="78" y="1071" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">GIS执行 · @gis-tool</text>
+<text x="78" y="1119" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">测地线面积统计 → 计算占比 → 检查几何有效性</text>
+<text x="78" y="1169" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">工具连接：arcgis-mcp-server</text>
+<polyline points="540,1232 540,1252" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,1252 531,1238 549,1238" fill="#008f88"/>
+<rect x="54" y="1256" width="972" height="220" rx="20" fill="#deefed"/>
+<text x="78" y="1272" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">05  将分析结果组织成专题图</text>
+<text x="78" y="1321" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">地图制图 · @gis-data-visualisation</text>
+<text x="78" y="1369" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">叠加遥感底图、道路与邻近范围，检查地图表达</text>
+<text x="78" y="1419" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">工具连接：color-style制图服务</text>
+<polyline points="540,1482 540,1502" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,1502 531,1488 549,1488" fill="#008f88"/>
+<rect x="54" y="1506" width="972" height="220" rx="20" fill="#ffffff"/>
+<text x="78" y="1522" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">06  汇总成果与分析依据</text>
+<text x="78" y="1571" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#2968ad">报告生成 · @report</text>
+<text x="78" y="1619" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#173e4a">整理过程、参数、结果与结论，形成可交付报告</text>
+<text x="78" y="1669" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="400" fill="#57737b">依据：实际工具输出与分析成果</text>
+<rect x="54" y="1770" width="972" height="142" rx="20" fill="#d6e8f3"/>
+<text x="80" y="1790" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">Hook贯穿工具调用</text>
+<text x="80" y="1844" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">参数与路径检查、数据备份、操作记录、结果反馈</text>
+<text x="54" y="1940" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#57737b">20米为案例参数；研究区为遥感影像覆盖范围矩形。</text>
+</svg>

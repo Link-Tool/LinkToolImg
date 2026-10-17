@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="2420" viewBox="0 0 1000 2420">
+<rect width="100%" height="100%" fill="#f3f8fa"/>
+<text x="64" y="83" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" font-weight="700" fill="#17364b">LinkTool：自然语言到 GIS 成果</text>
+<text x="66" y="152" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#587181">6个 Agent · Workflow · Skill · MCP · Hook</text>
+<rect x="64" y="195" width="872" height="125" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="251" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">用户需求</text>
+<text x="88" y="293" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">目标 + 数据 + 预期成果与验收标准</text>
+<line x1="500" y1="320" x2="500" y2="350" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,350 492.6055859201091,334.6923992600045 507.3944140798909,334.6923992600045" fill="#087f8c"/>
+<rect x="64" y="350" width="872" height="130" rx="20" fill="#edf3fb" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="404" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" fill="#087f8c">任务分类 · question-classify（可选）</text>
+<text x="88" y="448" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">常规启动可直接进入任务规划</text>
+<line x1="500" y1="480" x2="500" y2="510" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,510 492.6055859201091,494.6923992600045 507.3944140798909,494.6923992600045" fill="#087f8c"/>
+<rect x="64" y="510" width="872" height="135" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="566" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">任务规划 · task-plan</text>
+<text x="88" y="608" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">解释目标，选择流程，约定参数与验收</text>
+<line x1="500" y1="645" x2="500" y2="675" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,675 492.6055859201091,659.6923992600045 507.3944140798909,659.6923992600045" fill="#087f8c"/>
+<rect x="64" y="675" width="872" height="135" rx="20" fill="#e6effb" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="731" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">Workflow · 过程编排</text>
+<text x="88" y="773" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">组织顺序、并行、上下文与重试</text>
+<line x1="500" y1="810" x2="500" y2="840" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,840 492.6055859201091,824.6923992600045 507.3944140798909,824.6923992600045" fill="#087f8c"/>
+<rect x="64" y="840" width="424" height="180" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="891" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="700" fill="#087f8c">数据检索 · data-retrieval</text>
+<text x="88" y="938" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">字段、范围、坐标</text>
+<text x="88" y="978" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">返回数据速览卡片</text>
+<rect x="512" y="840" width="424" height="180" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="536" y="891" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="700" fill="#087f8c">GIS执行 · gis-tool</text>
+<text x="536" y="938" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">参数确认与调用</text>
+<text x="536" y="978" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">结果核验与重试</text>
+<rect x="64" y="1045" width="424" height="180" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1093" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" fill="#087f8c">制图 · gis-data-visualisation</text>
+<text x="88" y="1143" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">专题图可视化</text>
+<text x="88" y="1183" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">检查图件表达</text>
+<rect x="512" y="1045" width="424" height="180" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="536" y="1096" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="700" fill="#087f8c">报告 · report</text>
+<text x="536" y="1143" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">读取真实成果</text>
+<text x="536" y="1183" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">生成报告与结论</text>
+<line x1="500" y1="1225" x2="500" y2="1255" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1255 492.6055859201091,1239.6923992600045 507.3944140798909,1239.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1255" width="872" height="135" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1311" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">Skill · 封装专业步骤</text>
+<text x="88" y="1353" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">检索 / 参数确认 / 执行 / 核查 / 制图 / 报告</text>
+<line x1="500" y1="1390" x2="500" y2="1420" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1420 492.6055859201091,1404.6923992600045 507.3944140798909,1404.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1420" width="872" height="170" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1476" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">arcgis-mcp-server · 核心桥接</text>
+<text x="88" y="1518" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">结构化工具名与参数 → 本机Python子进程</text>
+<text x="88" y="1558" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">提供GIS执行、GDB、属性与数据查询</text>
+<line x1="500" y1="1590" x2="500" y2="1620" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1620 492.6055859201091,1604.6923992600045 507.3944140798909,1604.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1620" width="872" height="135" rx="20" fill="#edf3fb" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1676" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">ArcGIS Pro / ArcPy</text>
+<text x="88" y="1718" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">专业计算，返回真实数据及工具消息</text>
+<text x="64" y="1821" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">Hook 贯穿上述调用过程</text>
+<rect x="64" y="1840" width="872" height="200" rx="20" fill="#fff5db" stroke="#e6d5a9" stroke-width="2"/>
+<text x="88" y="1892" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="32" font-weight="700" fill="#087f8c">调用前 / 调用后 / 上下文压缩后</text>
+<text x="88" y="1938" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">路径保护、参数检查、修改前备份</text>
+<text x="88" y="1978" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">操作日志、结果异常提示</text>
+<text x="88" y="2018" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">压缩后恢复精简操作历史</text>
+<rect x="64" y="2075" width="872" height="200" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="2129" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" fill="#087f8c">目录隔离与辅助服务</text>
+<text x="88" y="2173" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">01_DataBackup 原始输入（只读）</text>
+<text x="88" y="2213" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">02_WorkSpace 过程 / 03_Result 成果</text>
+<text x="88" y="2253" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">制图等MCP服务提供辅助能力</text>
+<text x="64" y="2363" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" fill="#587181">当前实现的组成示意；具体运行由真实日志验证。</text>
+</svg>

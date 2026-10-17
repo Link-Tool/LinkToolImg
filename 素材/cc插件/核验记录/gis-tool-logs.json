@@ -1,0 +1,3842 @@
+[
+    {
+        "execution_id": "32fe47f8-63a4-499d-b898-b0d8dc3f3511",
+        "timestamp": "2026-10-16T17:51:05.370687",
+        "tool_name": "arcpy.management.CreateFileGDB",
+        "parameters": {
+            "out_folder_path": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace",
+            "out_name": "江屯镇评价.gdb"
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace",
+            "江屯镇评价.gdb"
+        ],
+        "parameters_summary": {}
+    },
+    {
+        "execution_id": "57cab87e-733a-43a7-a87b-c4851179a324",
+        "timestamp": "2026-10-16T17:51:51.820193",
+        "tool_name": "arcpy.analysis.Select",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB",
+            "out_feature_class": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/耕地底图",
+            "where_clause": "DLBM IN ('0101','0102','0103')"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/耕地底图"
+        ],
+        "parameters_summary": {
+            "where_clause": "DLBM IN ('0101','0102','0103')"
+        }
+    },
+    {
+        "execution_id": "88375d20-e084-4637-8ef4-610973abe468",
+        "timestamp": "2026-10-16T17:52:32.298510",
+        "tool_name": "arcpy.management.Project",
+        "parameters": {
+            "in_dataset": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/三普土壤图",
+            "out_dataset": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土壤图_4525",
+            "out_coor_system": 4525
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/三普土壤图"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土壤图_4525"
+        ],
+        "parameters_summary": {}
+    },
+    {
+        "execution_id": "0fda56ef-82e3-4e84-b383-f166aa146eba",
+        "timestamp": "2026-10-16T17:53:17.511698",
+        "tool_name": "arcpy.conversion.ExcelToTable",
+        "parameters": {
+            "Input_Excel_File": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/广宁县评价单元土种与有效厚度质地构型对照0712-1.xlsx",
+            "Output_Table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表",
+            "Field_Name_Row": 1,
+            "Row_To_Start": 2
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表"
+        ],
+        "parameters_summary": {
+            "Input_Excel_File": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/广宁县评价单元土种与有效厚度质地构型对照0712-1.xlsx",
+            "Field_Name_Row": 1,
+            "Row_To_Start": 2
+        }
+    },
+    {
+        "execution_id": "6d708730-f8a8-4c2a-b4e9-d3e83e649499",
+        "timestamp": "2026-10-16T17:55:09.709412",
+        "tool_name": "arcpy.conversion.ExcelToTable",
+        "parameters": {
+            "Input_Excel_File": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/广宁县评价单元土种与有效厚度质地构型对照0712-1.xlsx",
+            "Output_Table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表"
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表"
+        ],
+        "parameters_summary": {
+            "Input_Excel_File": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/广宁县评价单元土种与有效厚度质地构型对照0712-1.xlsx"
+        }
+    },
+    {
+        "execution_id": "9fa8d5be-748b-4448-be61-99de0c59303f",
+        "timestamp": "2026-10-16T17:56:33.387223",
+        "tool_name": "arcpy.analysis.SpatialJoin",
+        "parameters": {
+            "target_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/耕地底图",
+            "join_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土壤图_4525",
+            "out_feature_class": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "join_operation": "JOIN_ONE_TO_ONE",
+            "match_option": "INTERSECT"
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "parameters_summary": {
+            "target_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/耕地底图",
+            "join_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土壤图_4525",
+            "join_operation": "JOIN_ONE_TO_ONE",
+            "match_option": "INTERSECT"
+        }
+    },
+    {
+        "execution_id": "c83150c5-d483-4091-a3e5-6f3caa85545a",
+        "timestamp": "2026-10-16T17:58:40.277638",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "TL",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "new_field_name": "STLMC"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "TL",
+            "new_field_name": "STLMC"
+        }
+    },
+    {
+        "execution_id": "dd2eb55c-f9aa-4ce8-8d0c-62b8df2aef0e",
+        "timestamp": "2026-10-16T17:58:55.622092",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "YL",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "new_field_name": "SYLMC"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "YL",
+            "new_field_name": "SYLMC"
+        }
+    },
+    {
+        "execution_id": "474ca5e6-ee63-4458-a976-1388cd18a735",
+        "timestamp": "2026-10-16T17:59:17.390296",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "TS",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "new_field_name": "STSMC"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "TS",
+            "new_field_name": "STSMC"
+        }
+    },
+    {
+        "execution_id": "d8151e8e-f4fc-410e-b61a-b8e912c96d69",
+        "timestamp": "2026-10-16T18:00:09.024929",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "TZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "new_field_name": "STZMC"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "TZ",
+            "new_field_name": "STZMC"
+        }
+    },
+    {
+        "execution_id": "5fe0e936-d81b-4ce1-ac58-000b1fa290d5",
+        "timestamp": "2026-10-16T18:00:41.140991",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YXTCHD",
+            "field_type": "SHORT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXTCHD",
+            "field_type": "SHORT"
+        }
+    },
+    {
+        "execution_id": "c1cca4a1-4a5f-4892-8263-2430314e0a17",
+        "timestamp": "2026-10-16T18:01:00.186295",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 20,
+            "field_name": "ZDGX",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 20,
+            "field_name": "ZDGX",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "0d8cfa79-5f05-4356-a16e-152ae9859dc3",
+        "timestamp": "2026-10-16T18:01:19.146645",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "有效土层厚度",
+                "F7种质地构型"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "STZMC",
+            "join_field": "土种",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "有效土层厚度",
+                "F7种质地构型"
+            ],
+            "in_field": "STZMC",
+            "join_field": "土种",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/土种对照表"
+        }
+    },
+    {
+        "execution_id": "9a11aa4d-3d96-48ba-974f-e7865e564caf",
+        "timestamp": "2026-10-16T18:01:42.558295",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!有效土层厚度!",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!有效土层厚度!",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHD"
+        }
+    },
+    {
+        "execution_id": "0e537431-27ea-45dc-b7c1-aec102f30b82",
+        "timestamp": "2026-10-16T18:06:54.661812",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field": "ZDGX",
+            "expression": "!F7种质地构型!",
+            "expression_type": "PYTHON3"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "ZDGX",
+            "expression": "!F7种质地构型!",
+            "expression_type": "PYTHON3"
+        }
+    },
+    {
+        "execution_id": "b4ffdc80-1cf2-42c6-b3ba-0cb774a4bdaa",
+        "timestamp": "2026-10-16T18:18:14.831973",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_pH_tif",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/pH_4525",
+            "out_coor_system": 4525,
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_pH_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/pH_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "66782fa4-bbc8-46ed-8c69-16b13e2817d2",
+        "timestamp": "2026-10-16T18:18:45.383626",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_有机质_tif",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/YJZ_4525",
+            "out_coor_system": 4525,
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_有机质_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/YJZ_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "28038368-63da-4768-9a87-ac1992f56a0b",
+        "timestamp": "2026-10-16T18:19:16.543264",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_土壤容重平均值_tif",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/TRRZ_4525",
+            "out_coor_system": 4525,
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_土壤容重平均值_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/TRRZ_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "16121095-df30-460b-b908-962e29157abd",
+        "timestamp": "2026-10-16T18:19:55.991673",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "SJD",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SJD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "24ca631d-aea1-404d-ae44-0266eeb11363",
+        "timestamp": "2026-10-16T18:20:11.779352",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YJZ",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YJZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "9c2c1de6-f236-4159-a202-019093ef27e3",
+        "timestamp": "2026-10-16T18:20:30.007673",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "TRRZ",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "TRRZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "c403c7ec-c978-48f1-b0ab-7634bf19bad3",
+        "timestamp": "2026-10-16T18:21:25.010007",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/pH_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_pH",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_pH"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/pH_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "f1a9f5a1-a726-470c-9456-6ebf85eb4748",
+        "timestamp": "2026-10-16T18:22:35.021207",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/YJZ_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YJZ",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YJZ"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/YJZ_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "9458d792-074c-464a-adc8-bc3d6cc54ed6",
+        "timestamp": "2026-10-16T18:23:03.370580",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/TRRZ_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_TRRZ",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_TRRZ"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/TRRZ_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "9e9abfee-e6ce-4b87-9fd7-14eff20b630b",
+        "timestamp": "2026-10-16T18:24:21.825158",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_pH"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_pH"
+        }
+    },
+    {
+        "execution_id": "80c1ef4e-a08b-419a-a50e-f863aac7b0a7",
+        "timestamp": "2026-10-16T18:24:37.174092",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "SJD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "SJD"
+        }
+    },
+    {
+        "execution_id": "c7756f43-98d6-40c5-a31c-6e0a0a68083b",
+        "timestamp": "2026-10-16T18:24:58.490533",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "drop_field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": "MEAN"
+        }
+    },
+    {
+        "execution_id": "26a581bc-fec3-4ff8-9d5c-455f60a7bcb8",
+        "timestamp": "2026-10-16T18:25:15.802178",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YJZ"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YJZ"
+        }
+    },
+    {
+        "execution_id": "1544887c-3ad8-48da-9958-e804a1457698",
+        "timestamp": "2026-10-16T18:25:31.626688",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "YJZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "YJZ"
+        }
+    },
+    {
+        "execution_id": "1d7353b1-4244-49a6-b1a1-3cd89c9ea17d",
+        "timestamp": "2026-10-16T18:25:53.435132",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "drop_field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": "MEAN"
+        }
+    },
+    {
+        "execution_id": "7b22b4e9-226d-49b6-981b-8d113b267bcd",
+        "timestamp": "2026-10-16T18:26:10.141058",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_TRRZ"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_TRRZ"
+        }
+    },
+    {
+        "execution_id": "d8b3879c-16a7-429c-8a24-d1bbad45b843",
+        "timestamp": "2026-10-16T18:31:02.483885",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "drop_field": "MEAN"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": "MEAN"
+        }
+    },
+    {
+        "execution_id": "45aa00eb-f8dd-47b5-9658-d6056a81669b",
+        "timestamp": "2026-10-16T18:31:24.721139",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YXL",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXL",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "e8b813bc-df14-4e99-bfac-dfe9dc91af52",
+        "timestamp": "2026-10-16T18:31:40.154986",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "SXJ",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SXJ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "0bb0f7e7-48bf-4b43-a444-8d0d11c2259d",
+        "timestamp": "2026-10-16T18:31:58.929102",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "GCHD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCHD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "c0af7041-ebee-4289-b41d-4b248025e84f",
+        "timestamp": "2026-10-16T18:33:36.391392",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_有效磷_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YXL",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YXL"
+        ],
+        "parameters_summary": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_有效磷_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "a4e51bd8-9d8c-405f-90a3-1eb16393d71a",
+        "timestamp": "2026-10-16T18:34:20.394496",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_速效钾_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SXJ",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SXJ"
+        ],
+        "parameters_summary": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_速效钾_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "6fad6e21-3bbb-4c95-8bc4-158a180dc61c",
+        "timestamp": "2026-10-16T18:34:50.982548",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_耕作层厚度_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_GCHD",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_GCHD"
+        ],
+        "parameters_summary": {
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_耕作层厚度_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "3e7e5793-a169-4756-9f3e-182c58f189e3",
+        "timestamp": "2026-10-16T18:35:57.060619",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YXL"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_YXL"
+        }
+    },
+    {
+        "execution_id": "6ebab494-f715-4797-9406-3cd28d82ccb3",
+        "timestamp": "2026-10-16T18:36:19.834195",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "YXL",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "YXL"
+        }
+    },
+    {
+        "execution_id": "3cce32de-169f-4001-a3e6-88bd4738a4f0",
+        "timestamp": "2026-10-16T18:36:42.977378",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "drop_field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": "MEAN"
+        }
+    },
+    {
+        "execution_id": "7714b89e-12c1-47af-8d98-baea89d516ff",
+        "timestamp": "2026-10-16T18:37:08.041478",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SXJ"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SXJ"
+        }
+    },
+    {
+        "execution_id": "5d339ef9-1864-4101-8fa2-1ede55fde03d",
+        "timestamp": "2026-10-16T18:37:24.775150",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "SXJ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "SXJ"
+        }
+    },
+    {
+        "execution_id": "bac4f6a3-f803-40b3-90f3-67fe011efde0",
+        "timestamp": "2026-10-16T18:37:42.246197",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "drop_field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": "MEAN"
+        }
+    },
+    {
+        "execution_id": "d86808df-7c18-4e32-9f34-a8fb972e4602",
+        "timestamp": "2026-10-16T18:37:59.222800",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_GCHD"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_GCHD"
+        }
+    },
+    {
+        "execution_id": "b7ce88b5-f5ad-4de4-b9be-12bdd6ce3de8",
+        "timestamp": "2026-10-16T18:38:14.642594",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "GCHD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "GCHD"
+        }
+    },
+    {
+        "execution_id": "af184407-8121-41b8-ba29-9e88c8661de2",
+        "timestamp": "2026-10-16T18:43:16.050740",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_002mm以下颗粒含量_tif",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/NL_4525",
+            "out_coor_system": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_002mm以下颗粒含量_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/NL_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "30f2af83-6b30-456d-b174-77d6b1859847",
+        "timestamp": "2026-10-16T18:43:58.300898",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_02_0_002mm颗粒含量_tif",
+            "out_coor_system": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/FL_4525",
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_02_0_002mm颗粒含量_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/FL_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "ada98484-aa01-43b7-81dd-abf56e36f80c",
+        "timestamp": "2026-10-16T18:44:42.067827",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_2_0_02mm颗粒含量_tif",
+            "out_coor_system": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL1_4525",
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_2_0_02mm颗粒含量_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL1_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "9c880cfb-e55a-44ec-a392-075329e05981",
+        "timestamp": "2026-10-16T18:45:16.892307",
+        "tool_name": "arcpy.management.ProjectRaster",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_2_0_2mm颗粒含量_tif",
+            "out_coor_system": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL2_4525",
+            "resampling_type": "NEAREST"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_2_0_2mm颗粒含量_tif"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL2_4525"
+        ],
+        "parameters_summary": {
+            "resampling_type": "NEAREST"
+        }
+    },
+    {
+        "execution_id": "3c57c18a-06ed-42e7-b784-9079e5f7c659",
+        "timestamp": "2026-10-16T18:46:50.389994",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/NL_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_NL",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_NL"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/NL_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "4125580f-9e55-4137-9d87-45298a3f25b5",
+        "timestamp": "2026-10-16T18:47:43.299885",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/FL_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_FL",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_FL"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/FL_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "a21af5ec-ec3e-4ebc-a646-8a0b6ee0ff15",
+        "timestamp": "2026-10-16T18:49:21.350374",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL1_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SL1",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SL1"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL1_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "bdbac565-efc4-4b11-9c5a-9c8c61a7466e",
+        "timestamp": "2026-10-16T18:50:03.083950",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL2_4525",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SL2",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SL2"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SL2_4525",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "f404911c-be08-46f3-8b95-b6dc0457434b",
+        "timestamp": "2026-10-16T18:51:17.953439",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "GCZD",
+            "field_type": "TEXT",
+            "field_length": 30,
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCZD",
+            "field_type": "TEXT",
+            "field_length": 30
+        }
+    },
+    {
+        "execution_id": "abf43cb8-acdd-45ac-8393-4b45ffa0e6f1",
+        "timestamp": "2026-10-16T18:51:32.435637",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_NL",
+            "fields": [
+                [
+                    "MEAN",
+                    "NL_MEAN"
+                ]
+            ]
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_NL",
+            "fields": [
+                [
+                    "MEAN",
+                    "NL_MEAN"
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "89449ba6-7dc7-47d9-bcf2-ba9a8838af8e",
+        "timestamp": "2026-10-16T18:58:28.144747",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "drop_field": [
+                "MEAN",
+                "MEAN_1"
+            ]
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": [
+                "MEAN",
+                "MEAN_1"
+            ]
+        }
+    },
+    {
+        "execution_id": "4cbab74c-4a20-49da-af8a-0ec2edb22b24",
+        "timestamp": "2026-10-16T18:59:02.308351",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_土壤容重平均值_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/trrz_stat",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/trrz_stat"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_土壤容重平均值_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "80932574-cc7c-4943-8659-16e625759dc4",
+        "timestamp": "2026-10-16T18:59:55.035330",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/trrz_stat"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/trrz_stat"
+        }
+    },
+    {
+        "execution_id": "0267c4eb-53ab-4b80-be3e-4e6aaaf15dba",
+        "timestamp": "2026-10-16T19:00:12.977690",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "TRRZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!MEAN!",
+            "expression_type": "PYTHON3",
+            "field": "TRRZ"
+        }
+    },
+    {
+        "execution_id": "53362406-2f9c-4015-9fda-dc427142508a",
+        "timestamp": "2026-10-16T19:01:47.189454",
+        "tool_name": "arcpy.management.DeleteField",
+        "parameters": {
+            "drop_field": [
+                "MEAN"
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "drop_field": [
+                "MEAN"
+            ]
+        }
+    },
+    {
+        "execution_id": "4b0b6774-f698-4708-88d1-98a7817160ae",
+        "timestamp": "2026-10-16T19:02:04.209614",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_002mm以下颗粒含量_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/clay_stat",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/clay_stat"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_002mm以下颗粒含量_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "0c15f32f-9931-40a2-b027-21308abcc3b3",
+        "timestamp": "2026-10-16T19:02:29.114441",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_02_0_002mm颗粒含量_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/silt_stat",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/silt_stat"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_02_0_002mm颗粒含量_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "9b36b3e2-88a7-4a98-b699-3a35928662e3",
+        "timestamp": "2026-10-16T19:02:55.770354",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_2_0_02mm颗粒含量_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand1_stat",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand1_stat"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_0_2_0_02mm颗粒含量_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "b8294089-c972-4ac1-97f3-b4a570f9367e",
+        "timestamp": "2026-10-16T19:03:20.904522",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_2_0_2mm颗粒含量_tif",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand2_stat",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand2_stat"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/_441223广宁县_2_0_2mm颗粒含量_tif",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "3a1bb368-97e4-41d5-a8bc-b7ba20d14d64",
+        "timestamp": "2026-10-16T19:04:56.550071",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/clay_stat"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/clay_stat"
+        }
+    },
+    {
+        "execution_id": "20eed4c3-94a5-4144-9124-67aa936e2d09",
+        "timestamp": "2026-10-16T19:05:16.803176",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/silt_stat"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/silt_stat"
+        }
+    },
+    {
+        "execution_id": "fb38409a-e5a4-4e72-9978-ac09df233591",
+        "timestamp": "2026-10-16T19:05:33.324534",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand1_stat"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand1_stat"
+        }
+    },
+    {
+        "execution_id": "ac9a37a0-30fa-4600-89ac-942631b27d7c",
+        "timestamp": "2026-10-16T19:05:53.824857",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand2_stat"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/sand2_stat"
+        }
+    },
+    {
+        "execution_id": "aac5aa28-eb8c-492a-a371-bdc970d17ab3",
+        "timestamp": "2026-10-16T19:08:45.865701",
+        "tool_name": "arcpy.sa.FocalStatistics",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "neighborhood": "NbrRectangle 10 10 CELL",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_focal_mean",
+            "statistics_type": "MEAN"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_focal_mean"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "neighborhood": "NbrRectangle 10 10 CELL",
+            "statistics_type": "MEAN"
+        }
+    },
+    {
+        "execution_id": "1d4e9348-d7ef-41fc-a36f-74360e226072",
+        "timestamp": "2026-10-16T19:13:09.980395",
+        "tool_name": "arcpy.ddd.Slope",
+        "parameters": {
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_slope",
+            "output_measurement": "DEGREE",
+            "z_factor": 1
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_slope"
+        ],
+        "parameters_summary": {
+            "z_factor": 1
+        }
+    },
+    {
+        "execution_id": "6210c547-b384-4882-80fa-d1e2d2cb6e52",
+        "timestamp": "2026-10-16T19:15:20.160338",
+        "tool_name": "arcpy.sa.RasterCalculator",
+        "parameters": {
+            "expression": "\"C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM\" - FocalStatistics(\"C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM\", NbrRectangle(10, 10, \"CELL\"), \"MEAN\")",
+            "output_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_TPI"
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_TPI"
+        ],
+        "parameters_summary": {
+            "expression": "\"C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM\" - FocalStatistics(\"C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM\", NbrRectangle(10, 10, \"CELL\"), \"MEAN\")"
+        }
+    },
+    {
+        "execution_id": "7ba37cf5-9295-4ccb-a811-486397ac3825",
+        "timestamp": "2026-10-16T19:17:43.013381",
+        "tool_name": "arcpy.management.Aggregate",
+        "parameters": {
+            "aggregation_type": "MEAN",
+            "cell_factor": 10,
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_agg300"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_agg300"
+        ],
+        "parameters_summary": {
+            "aggregation_type": "MEAN",
+            "cell_factor": 10
+        }
+    },
+    {
+        "execution_id": "3553dbd3-243a-4568-980c-1db4f5012036",
+        "timestamp": "2026-10-16T19:18:56.042609",
+        "tool_name": "arcpy.management.Resample",
+        "parameters": {
+            "cell_size": "300",
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300",
+            "resampling_type": "BILINEAR"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300"
+        ],
+        "parameters_summary": {
+            "cell_size": "300",
+            "resampling_type": "BILINEAR"
+        }
+    },
+    {
+        "execution_id": "577562d4-c1c1-4f52-97cf-0c8162cf6805",
+        "timestamp": "2026-10-16T19:19:35.117759",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DEM",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "17b5a41f-81f1-4081-8ee8-9a7f50d5395f",
+        "timestamp": "2026-10-16T19:20:31.486700",
+        "tool_name": "arcpy.management.Resample",
+        "parameters": {
+            "cell_size": "30",
+            "in_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300",
+            "out_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300_30m",
+            "resampling_type": "BILINEAR"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300_30m"
+        ],
+        "parameters_summary": {
+            "cell_size": "30",
+            "resampling_type": "BILINEAR"
+        }
+    },
+    {
+        "execution_id": "ea2c0ab3-cf9f-4d18-8640-e52ca2fe63ff",
+        "timestamp": "2026-10-16T19:21:05.441479",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300_30m",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_reg300_30m",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "534416df-379f-477e-b5af-422cdf9501ea",
+        "timestamp": "2026-10-16T19:21:31.625357",
+        "tool_name": "arcpy.sa.ZonalStatisticsAsTable",
+        "parameters": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_slope",
+            "in_zone_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE"
+        ],
+        "parameters_summary": {
+            "ignore_nodata": true,
+            "in_value_raster": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DEM_slope",
+            "statistics_type": "MEAN",
+            "zone_field": "OBJECTID"
+        }
+    },
+    {
+        "execution_id": "7b26c990-55c8-4cb6-8c01-b8e88035eba9",
+        "timestamp": "2026-10-16T19:23:11.113046",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM",
+            "new_field_name": "ELEV_MEAN"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "MEAN",
+            "new_field_name": "ELEV_MEAN"
+        }
+    },
+    {
+        "execution_id": "e9d6ec8b-2ec3-418b-9380-907ddeb1b471",
+        "timestamp": "2026-10-16T19:23:24.068623",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300",
+            "new_field_name": "REG_MEAN"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "MEAN",
+            "new_field_name": "REG_MEAN"
+        }
+    },
+    {
+        "execution_id": "5f1da646-1c7f-48e0-8ee0-78fa99aa76be",
+        "timestamp": "2026-10-16T19:23:34.842028",
+        "tool_name": "arcpy.management.AlterField",
+        "parameters": {
+            "field": "MEAN",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE",
+            "new_field_name": "SLOPE_MEAN"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "MEAN",
+            "new_field_name": "SLOPE_MEAN"
+        }
+    },
+    {
+        "execution_id": "4628ca5f-b831-4ba9-9905-a424f8f897cb",
+        "timestamp": "2026-10-16T19:23:52.298951",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "ELEV_MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "ELEV_MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_DEM"
+        }
+    },
+    {
+        "execution_id": "3de288b8-44ed-46b4-824b-f38dc797f7db",
+        "timestamp": "2026-10-16T19:24:09.198133",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "REG_MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "REG_MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_REG300"
+        }
+    },
+    {
+        "execution_id": "90004b43-57d3-4fea-be23-da684cada2bb",
+        "timestamp": "2026-10-16T19:24:24.149841",
+        "tool_name": "arcpy.management.JoinField",
+        "parameters": {
+            "fields": [
+                "SLOPE_MEAN"
+            ],
+            "in_data": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "fields": [
+                "SLOPE_MEAN"
+            ],
+            "in_field": "OBJECTID",
+            "join_field": "OBJECTID_1",
+            "join_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zstat_SLOPE"
+        }
+    },
+    {
+        "execution_id": "0c105770-0fed-49cd-ae12-926684906e31",
+        "timestamp": "2026-10-16T19:34:57.362809",
+        "tool_name": "arcpy.management.Project",
+        "parameters": {
+            "in_dataset": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/高标",
+            "out_dataset": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/高标_4525",
+            "out_coor_system": 4525
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/高标"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/高标_4525"
+        ],
+        "parameters_summary": {}
+    },
+    {
+        "execution_id": "27975aac-db19-48e9-9f79-8ab3b2964e90",
+        "timestamp": "2026-10-16T19:35:25.528080",
+        "tool_name": "arcpy.analysis.Select",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB",
+            "out_feature_class": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/河流",
+            "where_clause": "DLBM IN ('1101','1102')"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/河流"
+        ],
+        "parameters_summary": {
+            "where_clause": "DLBM IN ('1101','1102')"
+        }
+    },
+    {
+        "execution_id": "846114a2-5365-4b75-aa1c-4b7bf5885487",
+        "timestamp": "2026-10-16T19:35:47.404582",
+        "tool_name": "arcpy.analysis.Select",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB",
+            "out_feature_class": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/沟渠",
+            "where_clause": "DLBM = '1107'"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/01_DataBackup/三普耕地质量/江屯镇数据.gdb/DLTB"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/沟渠"
+        ],
+        "parameters_summary": {
+            "where_clause": "DLBM = '1107'"
+        }
+    },
+    {
+        "execution_id": "2927b18c-a224-47af-ab07-0514b7f6bd62",
+        "timestamp": "2026-10-16T19:36:44.198501",
+        "tool_name": "arcpy.management.AddFields",
+        "parameters": {
+            "field_description": [
+                [
+                    "DIS_GB",
+                    "DOUBLE"
+                ],
+                [
+                    "DIS_HL",
+                    "DOUBLE"
+                ],
+                [
+                    "DIS_GQ",
+                    "DOUBLE"
+                ]
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_description": [
+                [
+                    "DIS_GB",
+                    "DOUBLE"
+                ],
+                [
+                    "DIS_HL",
+                    "DOUBLE"
+                ],
+                [
+                    "DIS_GQ",
+                    "DOUBLE"
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "66b0e8a1-f12a-4dc4-a14b-bcc9948a484d",
+        "timestamp": "2026-10-16T19:37:01.797771",
+        "tool_name": "arcpy.analysis.Near",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/高标_4525"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/高标_4525"
+        }
+    },
+    {
+        "execution_id": "cea59b79-e3fd-4ae9-9312-1e6304457437",
+        "timestamp": "2026-10-16T19:37:17.268558",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_GB",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_GB"
+        }
+    },
+    {
+        "execution_id": "66d905d2-9743-4b41-a49c-dc3fc98c3ca5",
+        "timestamp": "2026-10-16T19:37:32.480754",
+        "tool_name": "arcpy.analysis.Near",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/河流"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/河流"
+        }
+    },
+    {
+        "execution_id": "e1d8f357-6667-45f2-82bb-20ce5582a713",
+        "timestamp": "2026-10-16T19:37:46.154282",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_HL",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_HL"
+        }
+    },
+    {
+        "execution_id": "8f57ed7c-5991-4891-8eca-1e273108f07c",
+        "timestamp": "2026-10-16T19:38:01.410323",
+        "tool_name": "arcpy.analysis.Near",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/沟渠"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "near_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/沟渠"
+        }
+    },
+    {
+        "execution_id": "b9084426-2f15-48b2-80bb-639f6c92ad17",
+        "timestamp": "2026-10-16T19:38:15.329579",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_GQ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!NEAR_DIST!",
+            "expression_type": "PYTHON3",
+            "field": "DIS_GQ"
+        }
+    },
+    {
+        "execution_id": "1a51ca6c-0f85-48cd-8377-c943d0414697",
+        "timestamp": "2026-10-16T19:43:08.788053",
+        "tool_name": "arcpy.management.AddFields",
+        "parameters": {
+            "field_description": [
+                [
+                    "SZYTJ",
+                    "TEXT",
+                    null,
+                    null,
+                    20
+                ],
+                [
+                    "PSNL",
+                    "TEXT",
+                    null,
+                    null,
+                    20
+                ]
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_description": [
+                [
+                    "SZYTJ",
+                    "TEXT",
+                    null,
+                    null,
+                    20
+                ],
+                [
+                    "PSNL",
+                    "TEXT",
+                    null,
+                    null,
+                    20
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "fa2e8bfc-ebe1-4bf4-94ce-f8e36fab0aa9",
+        "timestamp": "2026-10-16T19:47:36.359074",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field": "GCZD",
+            "expression": "classify(!MEAN!, !MEAN_1!, !MEAN_12! + !MEAN_12_13!)",
+            "expression_type": "PYTHON3",
+            "code_block": "def classify(clay, silt, sand):\n    if sand >= 85 and (silt + 1.5 * clay) < 15:\n        return '砂土及壤质砂土'\n    if (55 <= sand <= 85) or (43 <= sand <= 85 and clay < 20 and silt < 50):\n        return '砂质壤土'\n    if 28 <= silt <= 50 and 7 <= clay <= 27 and 23 <= sand <= 52:\n        return '壤土'\n    if (silt >= 50 and 12 <= clay <= 27) or (50 <= silt <= 80 and clay < 12):\n        return '粉(砂)质壤土'\n    if 45 <= sand <= 80 and 20 <= clay <= 35:\n        return '砂质黏壤土'\n    if 27 <= clay <= 40 and 20 <= sand <= 45:\n        return '黏壤土'\n    if 27 <= clay <= 40 and sand < 20:\n        return '粉(砂)质黏壤土'\n    if 35 <= clay <= 55 and 45 <= sand <= 65:\n        return '砂质黏土'\n    if 35 <= clay <= 55 and sand < 20 and silt > 40:\n        return '粉(砂)质黏土'\n    if 35 <= clay <= 55 and 20 <= sand <= 45 and silt <= 40:\n        return '壤质黏土'\n    if 40 <= clay <= 60 and sand < 45 and silt < 40:\n        return '黏土'\n    if clay >= 60:\n        return '重黏土'\n    return '壤土'"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field": "GCZD",
+            "expression": "classify(!MEAN!, !MEAN_1!, !MEAN_12! + !MEAN_12_13!)",
+            "expression_type": "PYTHON3",
+            "code_block": "def classify(clay, silt, sand):\n    if sand >= 85 and (silt + 1.5 * clay) < 15:\n        return '砂土及壤质砂土'\n    if (55 <= sand <= 85) or (43 <= sand <= 85 and clay < 20 and silt < 50):\n        return '砂质壤土'\n    if 28 <= silt <= 50 and 7 <= clay <= 27 and 23 <= sand <= 52:\n        return '壤土'\n    if (silt >= 50 and 12 <= clay <= 27) or (50 <= silt <= 80 and clay < 12):\n        return '粉(砂)质壤土'\n    if 45 <= sand <= 80 and 20 <= clay <= 35:\n        return '砂质黏壤土'\n    if 27 <= clay <= 40 and 20 <= sand <= 45:\n        return '黏壤土'\n    if 27 <= clay <= 40 and sand < 20:\n        return '粉(砂)质黏壤土'\n    if 35 <= clay <= 55 and 45 <= sand <= 65:\n        return '砂质黏土'\n    if 35 <= clay <= 55 and sand < 20 and silt > 40:\n        return '粉(砂)质黏土'\n    if 35 <= clay <= 55 and 20 <= sand <= 45 and silt <= 40:\n        return '壤质黏土'\n    if 40 <= clay <= 60 and sand < 45 and silt < 40:\n        return '黏土'\n    if clay >= 60:\n        return '重黏土'\n    return '壤土'"
+        }
+    },
+    {
+        "execution_id": "272334de-7645-462d-ab03-2f3b041cec91",
+        "timestamp": "2026-10-16T19:49:27.287492",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "frequency_fields": "GCZD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/GCZD_freq"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/GCZD_freq"
+        ],
+        "parameters_summary": {
+            "frequency_fields": "GCZD"
+        }
+    },
+    {
+        "execution_id": "2e54e6fa-c00d-4d03-a932-340f28ac51cd",
+        "timestamp": "2026-10-16T19:56:43.092330",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "DXBW",
+            "field_type": "TEXT",
+            "field_length": 20
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "DXBW",
+            "field_type": "TEXT",
+            "field_length": 20
+        }
+    },
+    {
+        "execution_id": "18aaa093-8259-48d5-b653-aec3abadd740",
+        "timestamp": "2026-10-16T19:58:02.491931",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def classify_dxbw(elev, reg, slope):\n    if elev is None or reg is None:\n        return None\n    tpi = elev - reg\n    if tpi <= -15:\n        return u'山间盆地'\n    if tpi <= -5:\n        if slope is not None and slope < 5:\n            return u'宽谷盆地'\n        return u'山地坡下'\n    if tpi < 5:\n        if slope is not None and slope < 5:\n            return u'平原低阶'\n        if slope is not None and slope < 15:\n            return u'丘陵下部'\n        return u'山地坡下'\n    if tpi < 15:\n        if elev > 500:\n            return u'山地坡中'\n        return u'丘陵中部'\n    if elev > 500:\n        return u'山地坡上'\n    return u'丘陵上部'",
+            "expression": "classify_dxbw(!ELEV_MEAN!, !REG_MEAN!, !SLOPE_MEAN!)",
+            "expression_type": "PYTHON3",
+            "field": "DXBW",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def classify_dxbw(elev, reg, slope):\n    if elev is None or reg is None:\n        return None\n    tpi = elev - reg\n    if tpi <= -15:\n        return u'山间盆地'\n    if tpi <= -5:\n        if slope is not None and slope < 5:\n            return u'宽谷盆地'\n        return u'山地坡下'\n    if tpi < 5:\n        if slope is not None and slope < 5:\n            return u'平原低阶'\n        if slope is not None and slope < 15:\n            return u'丘陵下部'\n        return u'山地坡下'\n    if tpi < 15:\n        if elev > 500:\n            return u'山地坡中'\n        return u'丘陵中部'\n    if elev > 500:\n        return u'山地坡上'\n    return u'丘陵上部'",
+            "expression": "classify_dxbw(!ELEV_MEAN!, !REG_MEAN!, !SLOPE_MEAN!)",
+            "expression_type": "PYTHON3",
+            "field": "DXBW"
+        }
+    },
+    {
+        "execution_id": "f9d1eccf-16ff-4242-9d08-f54446edb959",
+        "timestamp": "2026-10-16T19:58:28.561244",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def classify_szytj(dis_gb, dis_hl, dis_gq, dlbm):\n    gb = dis_gb if dis_gb is not None else 999999\n    hl = dis_hl if dis_hl is not None else 999999\n    gq = dis_gq if dis_gq is not None else 999999\n    if gb <= 50 or gq <= 50:\n        level = 3\n    elif hl <= 200 or gq <= 200:\n        level = 2\n    elif hl <= 500 or gq <= 500:\n        level = 1\n    else:\n        level = 0\n    if dlbm == '0101':\n        if level < 2:\n            level = 2\n    elif dlbm == '0102':\n        if level < 1:\n            level = 1\n    elif dlbm == '0103':\n        if level > 1:\n            level = 1\n    levels = {3: u'充分满足', 2: u'满足', 1: u'基本满足', 0: u'不满足'}\n    return levels[level]",
+            "expression": "classify_szytj(!DIS_GB!, !DIS_HL!, !DIS_GQ!, !DLBM!)",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def classify_szytj(dis_gb, dis_hl, dis_gq, dlbm):\n    gb = dis_gb if dis_gb is not None else 999999\n    hl = dis_hl if dis_hl is not None else 999999\n    gq = dis_gq if dis_gq is not None else 999999\n    if gb <= 50 or gq <= 50:\n        level = 3\n    elif hl <= 200 or gq <= 200:\n        level = 2\n    elif hl <= 500 or gq <= 500:\n        level = 1\n    else:\n        level = 0\n    if dlbm == '0101':\n        if level < 2:\n            level = 2\n    elif dlbm == '0102':\n        if level < 1:\n            level = 1\n    elif dlbm == '0103':\n        if level > 1:\n            level = 1\n    levels = {3: u'充分满足', 2: u'满足', 1: u'基本满足', 0: u'不满足'}\n    return levels[level]",
+            "expression": "classify_szytj(!DIS_GB!, !DIS_HL!, !DIS_GQ!, !DLBM!)",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJ"
+        }
+    },
+    {
+        "execution_id": "22b848e1-8a1c-414e-b2b7-8c7998519636",
+        "timestamp": "2026-10-16T19:58:51.541788",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def classify_psnl(dis_gb, dis_hl, dis_gq, dlbm, stlmc):\n    gb = dis_gb if dis_gb is not None else 999999\n    hl = dis_hl if dis_hl is not None else 999999\n    gq = dis_gq if dis_gq is not None else 999999\n    if gb <= 50 or gq <= 50:\n        level = 3\n    elif hl <= 200 or gq <= 200:\n        level = 2\n    elif hl <= 500 or gq <= 500:\n        level = 1\n    else:\n        level = 0\n    stl = stlmc if stlmc is not None else ''\n    if u'潜育' in stl:\n        if level < 1:\n            level = 1\n    if dlbm == '0101':\n        if level < 2:\n            level = 2\n    elif dlbm == '0102':\n        if level < 1:\n            level = 1\n    elif dlbm == '0103':\n        if level > 1:\n            level = 1\n    levels = {3: u'充分满足', 2: u'满足', 1: u'基本满足', 0: u'不满足'}\n    return levels[level]",
+            "expression": "classify_psnl(!DIS_GB!, !DIS_HL!, !DIS_GQ!, !DLBM!, !STLMC!)",
+            "expression_type": "PYTHON3",
+            "field": "PSNL",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def classify_psnl(dis_gb, dis_hl, dis_gq, dlbm, stlmc):\n    gb = dis_gb if dis_gb is not None else 999999\n    hl = dis_hl if dis_hl is not None else 999999\n    gq = dis_gq if dis_gq is not None else 999999\n    if gb <= 50 or gq <= 50:\n        level = 3\n    elif hl <= 200 or gq <= 200:\n        level = 2\n    elif hl <= 500 or gq <= 500:\n        level = 1\n    else:\n        level = 0\n    stl = stlmc if stlmc is not None else ''\n    if u'潜育' in stl:\n        if level < 1:\n            level = 1\n    if dlbm == '0101':\n        if level < 2:\n            level = 2\n    elif dlbm == '0102':\n        if level < 1:\n            level = 1\n    elif dlbm == '0103':\n        if level > 1:\n            level = 1\n    levels = {3: u'充分满足', 2: u'满足', 1: u'基本满足', 0: u'不满足'}\n    return levels[level]",
+            "expression": "classify_psnl(!DIS_GB!, !DIS_HL!, !DIS_GQ!, !DLBM!, !STLMC!)",
+            "expression_type": "PYTHON3",
+            "field": "PSNL"
+        }
+    },
+    {
+        "execution_id": "d49ed60d-8c12-4a21-b1be-bcf37fef89f5",
+        "timestamp": "2026-10-16T19:59:19.069762",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "frequency_fields": [
+                "DXBW"
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DXBW_freq"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/DXBW_freq"
+        ],
+        "parameters_summary": {
+            "frequency_fields": [
+                "DXBW"
+            ]
+        }
+    },
+    {
+        "execution_id": "102764de-89a5-4187-8603-9281915e3d5a",
+        "timestamp": "2026-10-16T20:00:09.979900",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "frequency_fields": [
+                "SZYTJ"
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SZYTJ_freq"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/SZYTJ_freq"
+        ],
+        "parameters_summary": {
+            "frequency_fields": [
+                "SZYTJ"
+            ]
+        }
+    },
+    {
+        "execution_id": "e29ceb97-f857-40f2-834f-98adc6324a9b",
+        "timestamp": "2026-10-16T20:00:49.861622",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "frequency_fields": [
+                "PSNL"
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/PSNL_freq"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/PSNL_freq"
+        ],
+        "parameters_summary": {
+            "frequency_fields": [
+                "PSNL"
+            ]
+        }
+    },
+    {
+        "execution_id": "588d6e7e-fa29-4459-8667-9e62d79dbfdd",
+        "timestamp": "2026-10-16T20:07:36.358993",
+        "tool_name": "arcpy.management.AddFields",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_properties": [
+                [
+                    "SJDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YJZLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YXLLSD",
+                    "FLOAT"
+                ],
+                [
+                    "SXJLSD",
+                    "FLOAT"
+                ],
+                [
+                    "GCHDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YXTCHDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "TRRZLSD",
+                    "FLOAT"
+                ]
+            ]
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_properties": [
+                [
+                    "SJDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YJZLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YXLLSD",
+                    "FLOAT"
+                ],
+                [
+                    "SXJLSD",
+                    "FLOAT"
+                ],
+                [
+                    "GCHDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "YXTCHDLSD",
+                    "FLOAT"
+                ],
+                [
+                    "TRRZLSD",
+                    "FLOAT"
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "4e066713-6d37-44f1-8f93-18175f44bf16",
+        "timestamp": "2026-10-16T20:08:14.891507",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "SJDLSD",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SJDLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "f5108d4f-dd8c-4b0d-82d3-037a74c950ad",
+        "timestamp": "2026-10-16T20:08:29.335351",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YJZLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YJZLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "e80c6ccc-1c35-4515-98aa-8b26aad0a421",
+        "timestamp": "2026-10-16T20:08:46.228588",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YXLLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXLLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "8e6f8113-6869-4b11-a705-c92c93b4c9d0",
+        "timestamp": "2026-10-16T20:09:01.003267",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "SXJLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SXJLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "1e62a1dd-e5b6-4c52-84e7-151b9dc9d55f",
+        "timestamp": "2026-10-16T20:09:16.536030",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "GCHDLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCHDLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "31340f80-92d5-4f4f-82be-d86d60d1d255",
+        "timestamp": "2026-10-16T20:09:33.384424",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "YXTCHDLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXTCHDLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "5283e6b8-b1c6-4cf3-977d-da0b21b90efd",
+        "timestamp": "2026-10-16T20:09:49.055891",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "TRRZLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "TRRZLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "c2fb23a9-2150-41a1-953a-b7e97e42fd52",
+        "timestamp": "2026-10-16T20:10:10.480352",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 3.0 or u >= 10.0:\n        return 0.0\n    return 1.0 / (1.0 + 0.221129 * (u - 6.811204) ** 2)",
+            "expression": "calc(!SJD!)",
+            "expression_type": "PYTHON3",
+            "field": "SJDLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 3.0 or u >= 10.0:\n        return 0.0\n    return 1.0 / (1.0 + 0.221129 * (u - 6.811204) ** 2)",
+            "expression": "calc(!SJD!)",
+            "expression_type": "PYTHON3",
+            "field": "SJDLSD"
+        }
+    },
+    {
+        "execution_id": "fcca0615-f4f8-451e-866c-d8d3c1732138",
+        "timestamp": "2026-10-16T20:10:25.324273",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 33.6:\n        return 1.0\n    return 1.0 / (1.0 + 0.001842 * (u - 33.656446) ** 2)",
+            "expression": "calc(!YJZ!)",
+            "expression_type": "PYTHON3",
+            "field": "YJZLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 33.6:\n        return 1.0\n    return 1.0 / (1.0 + 0.001842 * (u - 33.656446) ** 2)",
+            "expression": "calc(!YJZ!)",
+            "expression_type": "PYTHON3",
+            "field": "YJZLSD"
+        }
+    },
+    {
+        "execution_id": "5f912e1a-6e62-4514-99ea-558a5f93b845",
+        "timestamp": "2026-10-16T20:10:39.478959",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 33.3:\n        return 1.0\n    return 1.0 / (1.0 + 0.002025 * (u - 33.346824) ** 2)",
+            "expression": "calc(!YXL!)",
+            "expression_type": "PYTHON3",
+            "field": "YXLLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 33.3:\n        return 1.0\n    return 1.0 / (1.0 + 0.002025 * (u - 33.346824) ** 2)",
+            "expression": "calc(!YXL!)",
+            "expression_type": "PYTHON3",
+            "field": "YXLLSD"
+        }
+    },
+    {
+        "execution_id": "aabaee66-124f-4f8f-9bfa-bf7af2ec2f7d",
+        "timestamp": "2026-10-16T20:10:53.326309",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 181:\n        return 1.0\n    return 1.0 / (1.0 + 0.000081 * (u - 181.622535) ** 2)",
+            "expression": "calc(!SXJ!)",
+            "expression_type": "PYTHON3",
+            "field": "SXJLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 181:\n        return 1.0\n    return 1.0 / (1.0 + 0.000081 * (u - 181.622535) ** 2)",
+            "expression": "calc(!SXJ!)",
+            "expression_type": "PYTHON3",
+            "field": "SXJLSD"
+        }
+    },
+    {
+        "execution_id": "700f9573-0668-4088-adc0-36f29afd1a1d",
+        "timestamp": "2026-10-16T20:11:07.889827",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 23:\n        return 1.0\n    return 1.0 / (1.0 + 0.008008 * (u - 23.333126) ** 2)",
+            "expression": "calc(!GCHD!)",
+            "expression_type": "PYTHON3",
+            "field": "GCHDLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0:\n        return 0.0\n    if u >= 23:\n        return 1.0\n    return 1.0 / (1.0 + 0.008008 * (u - 23.333126) ** 2)",
+            "expression": "calc(!GCHD!)",
+            "expression_type": "PYTHON3",
+            "field": "GCHDLSD"
+        }
+    },
+    {
+        "execution_id": "2925175f-51a2-4930-a352-a4b798726da8",
+        "timestamp": "2026-10-16T20:11:25.004019",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 10:\n        return 0.0\n    if u >= 99:\n        return 1.0\n    return 1.0 / (1.0 + 0.000205 * (u - 99.092342) ** 2)",
+            "expression": "calc(!YXTCHD!)",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHDLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 10:\n        return 0.0\n    if u >= 99:\n        return 1.0\n    return 1.0 / (1.0 + 0.000205 * (u - 99.092342) ** 2)",
+            "expression": "calc(!YXTCHD!)",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHDLSD"
+        }
+    },
+    {
+        "execution_id": "da860242-8c11-44ec-a718-bb59e15cd7db",
+        "timestamp": "2026-10-16T20:11:39.451581",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0.50 or u >= 2.21:\n        return 0.0\n    return 1.0 / (1.0 + 2.236726 * (u - 1.211674) ** 2)",
+            "expression": "calc(!TRRZ!)",
+            "expression_type": "PYTHON3",
+            "field": "TRRZLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def calc(u):\n    if u is None:\n        return 0.0\n    if u <= 0.50 or u >= 2.21:\n        return 0.0\n    return 1.0 / (1.0 + 2.236726 * (u - 1.211674) ** 2)",
+            "expression": "calc(!TRRZ!)",
+            "expression_type": "PYTHON3",
+            "field": "TRRZLSD"
+        }
+    },
+    {
+        "execution_id": "92937e71-0e84-4495-b214-0652b7c7e296",
+        "timestamp": "2026-10-16T20:17:13.189444",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "DXBWLSD",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "DXBWLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "1363aed2-4f73-4f3e-9873-f571bdde3b86",
+        "timestamp": "2026-10-16T20:17:28.006472",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "ZDGXLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "ZDGXLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "16bcd2bf-292e-4ed5-88fa-61371c84f557",
+        "timestamp": "2026-10-16T20:17:44.698188",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "GCZDLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCZDLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "a25410cb-11ac-4950-b5a8-f1e2e4208b10",
+        "timestamp": "2026-10-16T20:17:58.976227",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "SZYTJLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SZYTJLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "2ee150c3-12e1-47c7-b159-52b6013ac2e7",
+        "timestamp": "2026-10-16T20:18:14.349700",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "PSNLLSD",
+            "field_type": "FLOAT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "PSNLLSD",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "53d4826e-52eb-4d82-81cd-f5a441edcade",
+        "timestamp": "2026-10-16T20:18:30.759001",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def f(v):\n    d = {'山间盆地':0.8,'宽谷盆地':0.95,'平原低阶':1,'平原中阶':0.95,'平原高阶':0.9,'丘陵上部':0.6,'丘陵中部':0.7,'丘陵下部':0.8,'山地坡上':0.3,'山地坡中':0.45,'山地坡下':0.68}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!DXBW!)",
+            "expression_type": "PYTHON3",
+            "field": "DXBWLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def f(v):\n    d = {'山间盆地':0.8,'宽谷盆地':0.95,'平原低阶':1,'平原中阶':0.95,'平原高阶':0.9,'丘陵上部':0.6,'丘陵中部':0.7,'丘陵下部':0.8,'山地坡上':0.3,'山地坡中':0.45,'山地坡下':0.68}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!DXBW!)",
+            "expression_type": "PYTHON3",
+            "field": "DXBWLSD"
+        }
+    },
+    {
+        "execution_id": "f4ef559e-4bbc-4ed5-a01f-c200c93c700f",
+        "timestamp": "2026-10-16T20:18:49.037693",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def f(v):\n    d = {'上松下紧型':1,'海绵型':0.95,'夹层型':0.85,'紧实型':0.75,'上紧下松型':0.4,'松散型':0.3,'薄层型':0.55}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!ZDGX!)",
+            "expression_type": "PYTHON3",
+            "field": "ZDGXLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def f(v):\n    d = {'上松下紧型':1,'海绵型':0.95,'夹层型':0.85,'紧实型':0.75,'上紧下松型':0.4,'松散型':0.3,'薄层型':0.55}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!ZDGX!)",
+            "expression_type": "PYTHON3",
+            "field": "ZDGXLSD"
+        }
+    },
+    {
+        "execution_id": "5c08948d-dfc0-4a2f-b18c-7fdd5a97c8fb",
+        "timestamp": "2026-10-16T20:19:10.080699",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def f(v):\n    d = {'壤土':1,'粉(砂)质壤土':0.95,'黏壤土':0.9,'粉(砂)质黏壤土':0.85,'粉(砂)质黏土':0.8,'砂质黏壤土':0.75,'砂质壤土':0.7,'壤质黏土':0.65,'黏土':0.62,'砂质黏土':0.6,'重黏土':0.55,'砂土及壤质砂土':0.5}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!GCZD!)",
+            "expression_type": "PYTHON3",
+            "field": "GCZDLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def f(v):\n    d = {'壤土':1,'粉(砂)质壤土':0.95,'黏壤土':0.9,'粉(砂)质黏壤土':0.85,'粉(砂)质黏土':0.8,'砂质黏壤土':0.75,'砂质壤土':0.7,'壤质黏土':0.65,'黏土':0.62,'砂质黏土':0.6,'重黏土':0.55,'砂土及壤质砂土':0.5}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!GCZD!)",
+            "expression_type": "PYTHON3",
+            "field": "GCZDLSD"
+        }
+    },
+    {
+        "execution_id": "28b9b042-ac11-4893-9319-25c1c9a6d155",
+        "timestamp": "2026-10-16T20:19:24.252124",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def f(v):\n    d = {'充分满足':1,'满足':0.8,'基本满足':0.6,'不满足':0.3}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!SZYTJ!)",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def f(v):\n    d = {'充分满足':1,'满足':0.8,'基本满足':0.6,'不满足':0.3}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!SZYTJ!)",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJLSD"
+        }
+    },
+    {
+        "execution_id": "3e731a49-b32e-42b4-834c-f5f7baf71d28",
+        "timestamp": "2026-10-16T20:19:43.200781",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def f(v):\n    d = {'充分满足':1,'满足':0.8,'基本满足':0.6,'不满足':0.3}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!PSNL!)",
+            "expression_type": "PYTHON3",
+            "field": "PSNLLSD",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def f(v):\n    d = {'充分满足':1,'满足':0.8,'基本满足':0.6,'不满足':0.3}\n    return d.get(v, 0) if v else 0",
+            "expression": "f(!PSNL!)",
+            "expression_type": "PYTHON3",
+            "field": "PSNLLSD"
+        }
+    },
+    {
+        "execution_id": "76fc20be-c8fd-4b3c-9ace-5bd4a8fe1a2f",
+        "timestamp": "2026-10-16T20:26:38.920659",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "ZHZS",
+            "field_type": "FLOAT",
+            "field_alias": "综合指数"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "ZHZS",
+            "field_type": "FLOAT",
+            "field_alias": "综合指数"
+        }
+    },
+    {
+        "execution_id": "33894bee-fe32-4db1-86cc-9a9efd6ac6ca",
+        "timestamp": "2026-10-16T20:27:01.151609",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_alias": "质量等级",
+            "field_name": "ZLDJ",
+            "field_type": "SHORT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_alias": "质量等级",
+            "field_name": "ZLDJ",
+            "field_type": "SHORT"
+        }
+    },
+    {
+        "execution_id": "32967b53-0061-4d62-8300-3b3057913eb3",
+        "timestamp": "2026-10-16T20:27:18.950374",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.1270*!DXBWLSD! + 0.0594*!GCHDLSD! + 0.0905*!GCZDLSD! + 0.1369*!SZYTJLSD! + 0.1070*!PSNLLSD! + 0.0681*!SXJLSD! + 0.0704*!SJDLSD! + 0.0494*!TRRZLSD! + 0.1046*!YJZLSD! + 0.0557*!YXLLSD! + 0.0579*!YXTCHDLSD! + 0.0731*!ZDGXLSD!",
+            "expression_type": "PYTHON3",
+            "field": "ZHZS",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.1270*!DXBWLSD! + 0.0594*!GCHDLSD! + 0.0905*!GCZDLSD! + 0.1369*!SZYTJLSD! + 0.1070*!PSNLLSD! + 0.0681*!SXJLSD! + 0.0704*!SJDLSD! + 0.0494*!TRRZLSD! + 0.1046*!YJZLSD! + 0.0557*!YXLLSD! + 0.0579*!YXTCHDLSD! + 0.0731*!ZDGXLSD!",
+            "expression_type": "PYTHON3",
+            "field": "ZHZS"
+        }
+    },
+    {
+        "execution_id": "72921a13-d617-4cba-bf31-a1b0256f80c0",
+        "timestamp": "2026-10-16T20:27:35.562300",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "code_block": "def classify(z):\n    if z >= 0.9070:\n        return 1\n    elif z >= 0.8806:\n        return 2\n    elif z >= 0.8543:\n        return 3\n    elif z >= 0.8279:\n        return 4\n    elif z >= 0.8015:\n        return 5\n    elif z >= 0.7751:\n        return 6\n    elif z >= 0.7488:\n        return 7\n    elif z >= 0.7224:\n        return 8\n    elif z >= 0.6960:\n        return 9\n    else:\n        return 10",
+            "expression": "classify(!ZHZS!)",
+            "expression_type": "PYTHON3",
+            "field": "ZLDJ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "code_block": "def classify(z):\n    if z >= 0.9070:\n        return 1\n    elif z >= 0.8806:\n        return 2\n    elif z >= 0.8543:\n        return 3\n    elif z >= 0.8279:\n        return 4\n    elif z >= 0.8015:\n        return 5\n    elif z >= 0.7751:\n        return 6\n    elif z >= 0.7488:\n        return 7\n    elif z >= 0.7224:\n        return 8\n    elif z >= 0.6960:\n        return 9\n    else:\n        return 10",
+            "expression": "classify(!ZHZS!)",
+            "expression_type": "PYTHON3",
+            "field": "ZLDJ"
+        }
+    },
+    {
+        "execution_id": "30608ea0-5800-4e24-a04b-e2a1fdd53ec5",
+        "timestamp": "2026-10-16T20:28:23.861615",
+        "tool_name": "arcpy.analysis.Statistics",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zhzs_stat",
+            "statistics_fields": [
+                [
+                    "ZHZS",
+                    "MIN"
+                ],
+                [
+                    "ZHZS",
+                    "MAX"
+                ],
+                [
+                    "ZHZS",
+                    "MEAN"
+                ],
+                [
+                    "ZHZS",
+                    "COUNT"
+                ]
+            ]
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zhzs_stat"
+        ],
+        "parameters_summary": {
+            "statistics_fields": [
+                [
+                    "ZHZS",
+                    "MIN"
+                ],
+                [
+                    "ZHZS",
+                    "MAX"
+                ],
+                [
+                    "ZHZS",
+                    "MEAN"
+                ],
+                [
+                    "ZHZS",
+                    "COUNT"
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "5139e274-4f99-4306-ab3d-0abc076584c0",
+        "timestamp": "2026-10-16T20:28:44.741540",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "frequency_fields": [
+                "ZLDJ"
+            ],
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zldj_freq"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/zldj_freq"
+        ],
+        "parameters_summary": {
+            "frequency_fields": [
+                "ZLDJ"
+            ]
+        }
+    },
+    {
+        "execution_id": "2e2dd29d-5609-405a-9aed-c340526c3cf3",
+        "timestamp": "2026-10-16T20:34:49.499110",
+        "tool_name": "arcpy.management.CreateFileGDB",
+        "parameters": {
+            "out_folder_path": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果",
+            "out_name": "441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库"
+        },
+        "input_paths": [],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果",
+            "441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库"
+        ],
+        "parameters_summary": {}
+    },
+    {
+        "execution_id": "e5d8cea8-c87c-4489-a0fb-37ece70aaeff",
+        "timestamp": "2026-10-16T20:35:38.803654",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "DXBWQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "DXBWQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "94694415-f4c7-4262-a363-e71e44a118e0",
+        "timestamp": "2026-10-16T20:35:53.172099",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "GCHDQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCHDQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "5fed8d01-be03-41f2-8092-47171ec581f8",
+        "timestamp": "2026-10-16T20:36:05.257559",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "GCZDQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GCZDQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "fb09e9e7-c11b-4e5c-adf5-80a6671b8066",
+        "timestamp": "2026-10-16T20:36:16.993471",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "SZYTJQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SZYTJQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "d17316a9-0d0b-4f8f-aede-89e0a09dae2e",
+        "timestamp": "2026-10-16T20:36:30.894776",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "PSNLQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "PSNLQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "25347214-7d7b-48b5-bb5e-97c29820b9c1",
+        "timestamp": "2026-10-16T20:36:43.036343",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "SXJQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SXJQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "c0fff931-7270-4502-b5dc-8ba3a1a64921",
+        "timestamp": "2026-10-16T20:36:54.470847",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "SJDQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "SJDQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "bf0e4fed-0fe8-4d7e-bc63-4175ad1f1699",
+        "timestamp": "2026-10-16T20:37:07.404596",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "TRRZQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "TRRZQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "5907942b-9579-49c9-beae-dcd88f3a0d2a",
+        "timestamp": "2026-10-16T20:37:21.484959",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "YJZQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YJZQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "71fc989f-6c1e-4693-b320-f78656268890",
+        "timestamp": "2026-10-16T20:37:32.430619",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "YXLQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXLQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "e72c2be0-e348-475e-b1e2-37abb8f1e818",
+        "timestamp": "2026-10-16T20:37:43.411075",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "YXTCHDQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "YXTCHDQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "d8cc39f1-0da6-4c2c-ad09-4a1dae8f8e3a",
+        "timestamp": "2026-10-16T20:37:56.423626",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "field_name": "ZDGXQZ",
+            "field_type": "FLOAT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "ZDGXQZ",
+            "field_type": "FLOAT"
+        }
+    },
+    {
+        "execution_id": "cd4a0160-68fa-4093-8d60-0a0a48dad2b0",
+        "timestamp": "2026-10-16T20:38:20.527862",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.1270",
+            "expression_type": "PYTHON3",
+            "field": "DXBWQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.1270",
+            "expression_type": "PYTHON3",
+            "field": "DXBWQZ"
+        }
+    },
+    {
+        "execution_id": "c4cc4a20-9f1c-4cfd-bcb6-082d4d5fe8fb",
+        "timestamp": "2026-10-16T20:38:35.293100",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0594",
+            "expression_type": "PYTHON3",
+            "field": "GCHDQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0594",
+            "expression_type": "PYTHON3",
+            "field": "GCHDQZ"
+        }
+    },
+    {
+        "execution_id": "2651485b-350e-44da-a6fd-1d93e227b464",
+        "timestamp": "2026-10-16T20:38:51.731002",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0905",
+            "expression_type": "PYTHON3",
+            "field": "GCZDQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0905",
+            "expression_type": "PYTHON3",
+            "field": "GCZDQZ"
+        }
+    },
+    {
+        "execution_id": "199c788f-a99d-4ed6-8767-fb06de74d8d6",
+        "timestamp": "2026-10-16T20:39:07.841988",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.1369",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.1369",
+            "expression_type": "PYTHON3",
+            "field": "SZYTJQZ"
+        }
+    },
+    {
+        "execution_id": "3c8afc2e-cf14-4eca-bcbd-52f1e1ac170f",
+        "timestamp": "2026-10-16T20:39:24.868497",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.1070",
+            "expression_type": "PYTHON3",
+            "field": "PSNLQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.1070",
+            "expression_type": "PYTHON3",
+            "field": "PSNLQZ"
+        }
+    },
+    {
+        "execution_id": "f23768c0-f024-44ed-8bf0-cd5ebdc39663",
+        "timestamp": "2026-10-16T20:39:39.621891",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0681",
+            "expression_type": "PYTHON3",
+            "field": "SXJQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0681",
+            "expression_type": "PYTHON3",
+            "field": "SXJQZ"
+        }
+    },
+    {
+        "execution_id": "717cd405-a5a7-4504-8023-298989b0119f",
+        "timestamp": "2026-10-16T20:39:57.300439",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0704",
+            "expression_type": "PYTHON3",
+            "field": "SJDQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0704",
+            "expression_type": "PYTHON3",
+            "field": "SJDQZ"
+        }
+    },
+    {
+        "execution_id": "50714208-5781-48b6-ad3c-0fb85b50c126",
+        "timestamp": "2026-10-16T20:40:09.669960",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0494",
+            "expression_type": "PYTHON3",
+            "field": "TRRZQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0494",
+            "expression_type": "PYTHON3",
+            "field": "TRRZQZ"
+        }
+    },
+    {
+        "execution_id": "97f3b511-cc11-45af-9420-a8cae1207202",
+        "timestamp": "2026-10-16T20:40:22.081630",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.1046",
+            "expression_type": "PYTHON3",
+            "field": "YJZQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.1046",
+            "expression_type": "PYTHON3",
+            "field": "YJZQZ"
+        }
+    },
+    {
+        "execution_id": "0bd2c7af-93c5-414a-b4b0-f0759259fc7e",
+        "timestamp": "2026-10-16T20:40:35.066577",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0557",
+            "expression_type": "PYTHON3",
+            "field": "YXLQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0557",
+            "expression_type": "PYTHON3",
+            "field": "YXLQZ"
+        }
+    },
+    {
+        "execution_id": "9e0f22fc-4c33-44e0-9e08-4fc65cf7ed68",
+        "timestamp": "2026-10-16T20:41:16.955180",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0579",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHDQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0579",
+            "expression_type": "PYTHON3",
+            "field": "YXTCHDQZ"
+        }
+    },
+    {
+        "execution_id": "03eaf8cb-223d-4a0f-bb0c-a9e3792fe4b3",
+        "timestamp": "2026-10-16T20:41:50.209174",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "0.0731",
+            "expression_type": "PYTHON3",
+            "field": "ZDGXQZ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "0.0731",
+            "expression_type": "PYTHON3",
+            "field": "ZDGXQZ"
+        }
+    },
+    {
+        "execution_id": "1c89c62c-c654-4940-bef5-6ae364e6e7ec",
+        "timestamp": "2026-10-16T20:42:13.675219",
+        "tool_name": "arcpy.management.CopyFeatures",
+        "parameters": {
+            "in_features": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元",
+            "out_feature_class": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/江屯镇评价.gdb/评价单元"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "parameters_summary": {}
+    },
+    {
+        "execution_id": "37192449-9438-4449-8e6a-44bd95c13bf3",
+        "timestamp": "2026-10-16T20:43:39.487021",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 18,
+            "field_name": "DYBH",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 18,
+            "field_name": "DYBH",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "16749ff8-eb90-4d33-bfd1-536bafa55dda",
+        "timestamp": "2026-10-16T20:43:53.244247",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 30,
+            "field_name": "XQMC",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 30,
+            "field_name": "XQMC",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "13161b5f-2b48-477a-aac7-e76c5439f09b",
+        "timestamp": "2026-10-16T20:44:06.878363",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 30,
+            "field_name": "ZMC",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 30,
+            "field_name": "ZMC",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "6f0d5899-22df-475b-ba44-eeba8bc14f93",
+        "timestamp": "2026-10-16T20:44:19.827918",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_name": "GDPCMJ",
+            "field_type": "DOUBLE",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_name": "GDPCMJ",
+            "field_type": "DOUBLE"
+        }
+    },
+    {
+        "execution_id": "76d932d4-3ae0-4d43-a06b-02d3e0021337",
+        "timestamp": "2026-10-16T20:44:33.059957",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 50,
+            "field_name": "NDLSCN",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 50,
+            "field_name": "NDLSCN",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "7313ee6c-df9c-4685-a4c7-82d8274ac990",
+        "timestamp": "2026-10-16T20:44:46.591679",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 50,
+            "field_name": "DJLSCN",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 50,
+            "field_name": "DJLSCN",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "d19782aa-e6f5-4093-981c-0c684cebd596",
+        "timestamp": "2026-10-16T20:44:59.402737",
+        "tool_name": "arcpy.management.AddField",
+        "parameters": {
+            "field_length": 50,
+            "field_name": "NDSCQL",
+            "field_type": "TEXT",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "field_length": 50,
+            "field_name": "NDSCQL",
+            "field_type": "TEXT"
+        }
+    },
+    {
+        "execution_id": "a95f06c0-f6e9-427e-b3ce-879273eacc8f",
+        "timestamp": "2026-10-16T20:45:47.073882",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "'广宁县'",
+            "expression_type": "PYTHON3",
+            "field": "XQMC",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "'广宁县'",
+            "expression_type": "PYTHON3",
+            "field": "XQMC"
+        }
+    },
+    {
+        "execution_id": "bf5318d0-cc00-4173-bbd6-52dc5fd410ca",
+        "timestamp": "2026-10-16T20:46:02.772240",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "'江屯镇'",
+            "expression_type": "PYTHON3",
+            "field": "ZMC",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "'江屯镇'",
+            "expression_type": "PYTHON3",
+            "field": "ZMC"
+        }
+    },
+    {
+        "execution_id": "813adb83-2f2b-4876-aa95-50c2e34a1ee2",
+        "timestamp": "2026-10-16T20:46:19.003067",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "!TBDLMJ!",
+            "expression_type": "PYTHON3",
+            "field": "GDPCMJ",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "!TBDLMJ!",
+            "expression_type": "PYTHON3",
+            "field": "GDPCMJ"
+        }
+    },
+    {
+        "execution_id": "6e18041b-35f0-469c-9b77-48d5c03262fe",
+        "timestamp": "2026-10-16T20:46:41.692109",
+        "tool_name": "arcpy.management.CalculateField",
+        "parameters": {
+            "expression": "(!ZLDWDM![:12] + !BSM![-6:]) if !ZLDWDM! else !BSM!",
+            "expression_type": "PYTHON3",
+            "field": "DYBH",
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [],
+        "parameters_summary": {
+            "expression": "(!ZLDWDM![:12] + !BSM![-6:]) if !ZLDWDM! else !BSM!",
+            "expression_type": "PYTHON3",
+            "field": "DYBH"
+        }
+    },
+    {
+        "execution_id": "9cad8768-0be5-40af-afb5-daf7c692bb5d",
+        "timestamp": "2026-10-16T20:52:53.033390",
+        "tool_name": "arcpy.analysis.Frequency",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/freq_zldj.dbf",
+            "frequency_fields": [
+                "ZLDJ"
+            ],
+            "summary_fields": [
+                [
+                    "TBMJ",
+                    "SUM"
+                ]
+            ]
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/freq_zldj.dbf"
+        ],
+        "parameters_summary": {
+            "frequency_fields": [
+                "ZLDJ"
+            ],
+            "summary_fields": [
+                [
+                    "TBMJ",
+                    "SUM"
+                ]
+            ]
+        }
+    },
+    {
+        "execution_id": "0f130a60-fdb4-4b2b-9acf-d7bd763299c4",
+        "timestamp": "2026-10-16T20:53:58.311835",
+        "tool_name": "arcpy.analysis.Statistics",
+        "parameters": {
+            "in_table": "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT",
+            "out_table": "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/stats_fields.dbf",
+            "statistics_fields": [
+                [
+                    "SJD",
+                    "MIN"
+                ],
+                [
+                    "SJD",
+                    "MAX"
+                ],
+                [
+                    "SJD",
+                    "MEAN"
+                ],
+                [
+                    "YJZ",
+                    "MIN"
+                ],
+                [
+                    "YJZ",
+                    "MAX"
+                ],
+                [
+                    "YJZ",
+                    "MEAN"
+                ],
+                [
+                    "YXL",
+                    "MIN"
+                ],
+                [
+                    "YXL",
+                    "MAX"
+                ],
+                [
+                    "YXL",
+                    "MEAN"
+                ],
+                [
+                    "SXJ",
+                    "MIN"
+                ],
+                [
+                    "SXJ",
+                    "MAX"
+                ],
+                [
+                    "SXJ",
+                    "MEAN"
+                ]
+            ],
+            "case_field": ""
+        },
+        "input_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/03_Result/441223广宁县江屯镇/4数据库成果/441223广宁县江屯镇第三次全国土壤普查耕地质量等级评价数据库.gdb/PJDYT"
+        ],
+        "output_paths": [
+            "C:/LinkTool/LinkTool-ClaudeCode/test/02_WorkSpace/stats_fields.dbf"
+        ],
+        "parameters_summary": {
+            "statistics_fields": [
+                [
+                    "SJD",
+                    "MIN"
+                ],
+                [
+                    "SJD",
+                    "MAX"
+                ],
+                [
+                    "SJD",
+                    "MEAN"
+                ],
+                [
+                    "YJZ",
+                    "MIN"
+                ],
+                [
+                    "YJZ",
+                    "MAX"
+                ],
+                [
+                    "YJZ",
+                    "MEAN"
+                ],
+                [
+                    "YXL",
+                    "MIN"
+                ],
+                [
+                    "YXL",
+                    "MAX"
+                ],
+                [
+                    "YXL",
+                    "MEAN"
+                ],
+                [
+                    "SXJ",
+                    "MIN"
+                ],
+                [
+                    "SXJ",
+                    "MAX"
+                ],
+                [
+                    "SXJ",
+                    "MEAN"
+                ]
+            ],
+            "case_field": ""
+        }
+    },
+    {
+        "execution_id": "1bd548aa-b121-405f-b5a9-f7b5897db188",
+        "timestamp": "2026-10-16T21:02:07.722869",
+        "tool_name": "arcpy.GetInstallInfo",
+        "parameters": {},
+        "input_paths": [],
+        "output_paths": [],
+        "parameters_summary": {}
+    }
+]

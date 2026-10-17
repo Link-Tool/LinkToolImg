@@ -1,0 +1,86 @@
+[
+  {
+    "figure": 1,
+    "alt": "LinkTool 空间分析多智能体调度系统架构",
+    "local_path": "素材/cc插件/正文配图/15_原稿_空间分析多智能体架构.png",
+    "article_reference": "../../素材/cc插件/正文配图/15_原稿_空间分析多智能体架构.png",
+    "sha256": "452f25679303591fbb39f93868ce5b840b0d0b33d8ca3258fa6f2254bb51ce22"
+  },
+  {
+    "figure": 2,
+    "alt": "多智能体空间分析任务调度示例流程",
+    "local_path": "素材/cc插件/正文配图/16_原稿_多智能体调度示例流程.png",
+    "article_reference": "../../素材/cc插件/正文配图/16_原稿_多智能体调度示例流程.png",
+    "sha256": "459ef0678d0423f02e12b8394256c4275244c5a3e38885312ac75be593e97bbc"
+  },
+  {
+    "figure": 3,
+    "alt": "江屯镇输入数据库",
+    "local_path": "素材/cc插件/正文配图/原始数据库.png",
+    "article_reference": "../../素材/cc插件/正文配图/原始数据库.png",
+    "sha256": "0b322511475520b7cf7525fc13a64d43bc1cb220dfde5f07930f029a703c8283"
+  },
+  {
+    "figure": 4,
+    "alt": "读取资料并安排任务",
+    "local_path": "素材/cc插件/正文配图/理解并安排任务.png",
+    "article_reference": "../../素材/cc插件/正文配图/理解并安排任务.png",
+    "sha256": "8c9b9df40b3a4ea2052710b4e253b6ec1c9c5ee64e5153a58d6cd6d939ac1bb5"
+  },
+  {
+    "figure": 5,
+    "alt": "评价任务分派与执行计划",
+    "local_path": "素材/cc插件/正文配图/派发workflow.png",
+    "article_reference": "../../素材/cc插件/正文配图/派发workflow.png",
+    "sha256": "3fc465a1182acd383a917b82e29fe919665cf7bcd44ab293608e177cf697e4e8"
+  },
+  {
+    "figure": 6,
+    "alt": "Hook 对输出路径的检查",
+    "local_path": "素材/cc插件/正文配图/hook拦截.png",
+    "article_reference": "../../素材/cc插件/正文配图/hook拦截.png",
+    "sha256": "1c5f1fc7a7c79125d9a9f17e0fb3dcc3ff1a0a5e0e3d1dcd49bcebbe2e6207c7"
+  },
+  {
+    "figure": 7,
+    "alt": "耕地质量评价统计结果",
+    "local_path": "素材/cc插件/正文配图/评价结果.png",
+    "article_reference": "../../素材/cc插件/正文配图/评价结果.png",
+    "sha256": "1bde3c525a007ea7e3fea2c3f344144e1eabacd11380a89ac36a65547b4312c5"
+  },
+  {
+    "figure": 8,
+    "alt": "江屯镇耕地质量评价五图总览",
+    "local_path": "素材/cc插件/正文配图/江屯镇耕地评价_五图总览.jpg",
+    "article_reference": "../../素材/cc插件/正文配图/江屯镇耕地评价_五图总览.jpg",
+    "sha256": "cde0f11122b85ef691571b13e865f326b2a90eb8be87422e99dc8d632477a870"
+  },
+  {
+    "figure": 9,
+    "alt": "评价统计表",
+    "local_path": "素材/cc插件/正文配图/统计表格.png",
+    "article_reference": "../../素材/cc插件/正文配图/统计表格.png",
+    "sha256": "ba9025d9bb6b8d0db0f9e7be46baf62539834248f9efde08f1439c67d0cbadad"
+  },
+  {
+    "figure": 10,
+    "alt": "评价报告",
+    "local_path": "素材/cc插件/正文配图/结果报告.png",
+    "article_reference": "../../素材/cc插件/正文配图/结果报告.png",
+    "sha256": "0d77640e63e6bfb89cdf3a4775e9203b94456e3ee465d2d30a8c9a3380504527"
+  },
+  {
+    "figure": 11,
+    "alt": "交付内容与指标清单",
+    "local_path": "素材/cc插件/正文配图/交付指标与清单.png",
+    "article_reference": "../../素材/cc插件/正文配图/交付指标与清单.png",
+    "sha256": "12cdebe5a5cab32501de75bb028c4ef83f4708d260a79015ffed23bf1983a221"
+  },
+  {
+    "figure": 12,
+    "alt": "本次运行的Token与费用统计",
+    "local_path": "素材/cc插件/正文配图/token消耗.png",
+    "article_reference": "../../素材/cc插件/正文配图/token消耗.png",
+    "sha256": "507591350432fbc74e565f25d1c5bb671c961ef97cba80488981a1172632d842"
+  }
+]

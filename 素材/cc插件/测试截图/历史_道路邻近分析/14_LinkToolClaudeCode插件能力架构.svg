@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1650" viewBox="0 0 1080 1650">
+<rect width="1080" height="1650" fill="#f1f7f8"/>
+<rect x="0" y="0" width="1080" height="220" rx="0" fill="#173e4a"/>
+<text x="54" y="30" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="26" font-weight="700" fill="#7eddd0">LINKTOOL / CLAUDE CODE 插件</text>
+<text x="54" y="78" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="48" font-weight="700" fill="#ffffff">通用分析，图文成果成套交付</text>
+<text x="54" y="155" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#d5e8ed">自然语言需求 → 工作流编排 → 专业计算 → 成果交付</text>
+<rect x="54" y="252" width="972" height="142" rx="20" fill="#deefed"/>
+<text x="80" y="272" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="700" fill="#008f88">业务需求</text>
+<text x="80" y="326" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">道路邻近 · 设施选址 · 空间统计 · 多因子评价</text>
+<polyline points="540,398 540,430" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,430 531,416 549,416" fill="#008f88"/>
+<rect x="54" y="438" width="972" height="175" rx="20" fill="#e0ebf8"/>
+<text x="80" y="458" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">task-plan 任务规划 + Workflow 编排</text>
+<text x="80" y="512" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">识别目标与数据条件，选择或组合分析流程</text>
+<text x="80" y="552" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">明确步骤依赖、输入输出与验收要求</text>
+<polyline points="540,618 540,650" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,650 531,636 549,636" fill="#008f88"/>
+<rect x="54" y="658" width="972" height="175" rx="20" fill="#ffffff"/>
+<text x="80" y="678" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#008f88">数据探索 + gis-tool 工具执行</text>
+<text x="80" y="732" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">核对数据，通过 MCP 调用 GIS 工具</text>
+<text x="80" y="772" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">处理空间关系、计算指标，检查实际结果</text>
+<polyline points="540,838 540,870" fill="none" stroke="#008f88" stroke-width="4"/>
+<polygon points="540,870 531,856 549,856" fill="#008f88"/>
+<text x="54" y="880" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="35" font-weight="700" fill="#173e4a">按需求组合交付成果</text>
+<rect x="54" y="940" width="308" height="204" rx="20" fill="#ffffff"/>
+<text x="76" y="965" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700" fill="#008f88">分析数据</text>
+<text x="76" y="1030" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">结果图层与属性</text>
+<text x="76" y="1072" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">面积、数量等统计</text>
+<rect x="386" y="940" width="308" height="204" rx="20" fill="#ffffff"/>
+<text x="408" y="965" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700" fill="#008f88">专题地图</text>
+<text x="408" y="1030" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">图层、符号与配色</text>
+<text x="408" y="1072" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">图例与图面表达</text>
+<rect x="718" y="940" width="308" height="204" rx="20" fill="#ffffff"/>
+<text x="740" y="965" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700" fill="#008f88">分析报告</text>
+<text x="740" y="1030" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">方法、过程与依据</text>
+<text x="740" y="1072" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="27" font-weight="400" fill="#173e4a">统计、图件与结论</text>
+<rect x="54" y="1180" width="972" height="160" rx="20" fill="#deefed"/>
+<text x="80" y="1200" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700" fill="#008f88">Skill：专业方法可复用</text>
+<text x="80" y="1254" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">按任务加载规划、核验、制图和报告方法</text>
+<text x="80" y="1294" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">支持针对不同业务补充技能与工作流</text>
+<rect x="54" y="1364" width="972" height="180" rx="20" fill="#e0ebf8"/>
+<text x="80" y="1384" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700" fill="#008f88">Hook：过程检查与记录</text>
+<text x="80" y="1438" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">调用前：路径保护、参数检查与备份处理</text>
+<text x="80" y="1478" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="30" font-weight="400" fill="#173e4a">调用后：日志记录、结果检查与异常反馈</text>
+<text x="54" y="1580" dominant-baseline="text-before-edge" font-family="Microsoft YaHei,sans-serif" font-size="29" font-weight="400" fill="#57737b">同一套插件，连接业务目标、空间分析与成果表达。</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "study_area_sqm": 503180.4846531921,
+  "buffer_area_sqm": 106758.60481602125,
+  "coverage_pct": 21.216761792660275,
+  "road_line_count": 36,
+  "crs": "EPSG:3857",
+  "crs_wkid": 3857,
+  "crs_name": "WGS_1984_Web_Mercator_Auxiliary_Sphere",
+  "study_area_feature_count": 1,
+  "buffer_feature_count": 1,
+  "area_field": "Area_sqm",
+  "area_unit": "SQUARE_METERS",
+  "area_method": "AREA_GEODESIC",
+  "buffer_distance_m": 20,
+  "buffer_method": "GEODESIC",
+  "buffer_dissolve_option": "ALL"
+}

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1840" viewBox="0 0 1000 1840">
+<rect width="100%" height="100%" fill="#f3f8fa"/>
+<text x="64" y="83" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" font-weight="700" fill="#17364b">实测：20米道路邻近范围</text>
+<text x="66" y="152" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" fill="#587181">CAD → 核查 → 缓冲 → 裁剪 → 统计 → 成果</text>
+<rect x="64" y="195" width="872" height="160" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="251" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">01 / 准备工作副本</text>
+<text x="88" y="293" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">保留原始res_road.dw</text>
+<text x="88" y="333" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">在工作区恢复.dwg扩展名</text>
+<line x1="500" y1="355" x2="500" y2="384" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,384 492.6055859201091,368.6923992600045 507.3944140798909,368.6923992600045" fill="#087f8c"/>
+<rect x="64" y="385" width="872" height="160" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="441" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">02 / 坐标与道路核查</text>
+<text x="88" y="483" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">用户确认EPSG:3857，无需配准</text>
+<text x="88" y="523" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">筛选Layer=道路的36条线</text>
+<line x1="500" y1="545" x2="500" y2="574" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,574 492.6055859201091,558.6923992600045 507.3944140798909,558.6923992600045" fill="#087f8c"/>
+<rect x="64" y="575" width="872" height="160" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="631" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">03 / 编排与同步续跑</text>
+<text x="88" y="673" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">Workflow中断后转同步Agent</text>
+<text x="88" y="713" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">GIS Agent经MCP调用ArcPy</text>
+<line x1="500" y1="735" x2="500" y2="764" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,764 492.6055859201091,748.6923992600045 507.3944140798909,748.6923992600045" fill="#087f8c"/>
+<rect x="64" y="765" width="872" height="160" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="821" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">04 / 20米缓冲并融合</text>
+<text x="88" y="863" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">采用测地线距离</text>
+<text x="88" y="903" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">融合重叠范围，避免重复计面积</text>
+<line x1="500" y1="925" x2="500" y2="954" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,954 492.6055859201091,938.6923992600045 507.3944140798909,938.6923992600045" fill="#087f8c"/>
+<rect x="64" y="955" width="872" height="160" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1011" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">05 / 按研究区裁剪</text>
+<text x="88" y="1053" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">研究区=影像范围矩形</text>
+<text x="88" y="1093" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">保留矩形内的缓冲并集</text>
+<line x1="500" y1="1115" x2="500" y2="1144" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1144 492.6055859201091,1128.6923992600045 507.3944140798909,1128.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1145" width="872" height="160" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1201" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">06 / 面积与覆盖率</text>
+<text x="88" y="1243" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">测地线面积</text>
+<text x="88" y="1283" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">覆盖率=覆盖面积÷研究区面积</text>
+<line x1="500" y1="1305" x2="500" y2="1334" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1334 492.6055859201091,1318.6923992600045 507.3944140798909,1318.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1335" width="872" height="160" rx="20" fill="#e1f2f3" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1391" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">07 / 专题图与过程报告</text>
+<text x="88" y="1433" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">叠加影像、道路与缓冲</text>
+<text x="88" y="1473" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">报告数字来自实际成果</text>
+<line x1="500" y1="1495" x2="500" y2="1524" stroke="#087f8c" stroke-width="4"/>
+<polygon points="500,1524 492.6055859201091,1508.6923992600045 507.3944140798909,1508.6923992600045" fill="#087f8c"/>
+<rect x="64" y="1525" width="872" height="160" rx="20" fill="#ffffff" stroke="#d4e4e9" stroke-width="2"/>
+<text x="88" y="1581" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" fill="#087f8c">08 / 独立验收与指标</text>
+<text x="88" y="1623" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">检查几何、对齐、统计一致性</text>
+<text x="88" y="1663" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" fill="#17364b">记录模型、token、时间与重试</text>
+<text x="64" y="1779" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="400" fill="#587181">20米为演示参数；原始数据不变，完整日志保留。</text>
+</svg>
