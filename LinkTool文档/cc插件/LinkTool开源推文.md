@@ -58,7 +58,7 @@ LinkTool 以 task-plan Agent 作为任务规划与调度的核心，将用户的
 
 这些问题决定了 LinkTool-ClaudeCode 的整体分工：Agent 承担不同任务，Workflow 组织执行，Skill 提供专业方法，Hook 负责过程检查，MCP 连接实际工具。任务规划将不同业务需求接入分析流程，制图和报告环节再将结果整理为对应成果。
 
-![LinkTool 空间分析多智能体调度系统架构](../../素材/cc插件/正文配图/15_原稿_空间分析多智能体架构.png)
+![LinkTool 空间分析多智能体调度系统架构](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/15_%E5%8E%9F%E7%A8%BF_%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E6%9E%B6%E6%9E%84.png)
 
 *图1｜空间分析多智能体调度系统架构：智能体、Skill、工具、Hook 与 Workflow 共同组织任务。*
 
@@ -76,7 +76,7 @@ gis-data-visualisation Agent 与 report Agent 负责把结果交出去。前者�
 
 下面的调度示例展示了一项空间分析任务如何在各角色之间交接：规划阶段梳理数据与依据，工具执行阶段完成计算和核验，随后进入制图与报告制作。
 
-![多智能体空间分析任务调度示例流程](../../素材/cc插件/正文配图/16_原稿_多智能体调度示例流程.png)
+![多智能体空间分析任务调度示例流程](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/16_%E5%8E%9F%E7%A8%BF_%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E8%B0%83%E5%BA%A6%E7%A4%BA%E4%BE%8B%E6%B5%81%E7%A8%8B.png)
 
 *图2｜多智能体任务调度示例：从需求规划到空间计算、图件与报告制作。*
 
@@ -137,7 +137,7 @@ GIS MCP 服务通过内置 Python 工具、WhiteboxTools、GDAL 和 QGIS 承接�
 - **《广宁县评价单元土种与有效厚度质地构型对照0712-1.xlsx》**：按土种补充有效土层厚度和质地构型，填补仅靠现有栅格无法直接获得的指标。
 - **《广东省第三次全国土壤普查县级耕地质量等级评价技术细则（试行稿）》及识别文本**：提供评价分区、指标权重、隶属度函数、等级划分和成果组织要求。
 
-![江屯镇输入数据库](../../素材/cc插件/正文配图/原始数据库.png)
+![江屯镇输入数据库](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E5%BA%93.png)
 
 *图3｜输入数据库中的土地利用、土壤属性、颗粒组成与地形数据。*
 
@@ -147,13 +147,13 @@ GIS MCP 服务通过内置 Python 工具、WhiteboxTools、GDAL 和 QGIS 承接�
 
 这一步也把需要业务判断的条件摆到了执行前：有效土层厚度与质地构型采用新增 Excel 对照表；水资源、排水条件利用高标准农田和河流、沟渠的距离推导；地形部位采用相对地形位置与坡度方法。粮食产能资料缺失，本次保留对应字段并留空。用户确认这些处理口径后，规划结果写入任务计划。
 
-![读取资料并安排任务](../../素材/cc插件/正文配图/理解并安排任务.png)
+![读取资料并安排任务](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E7%90%86%E8%A7%A3%E5%B9%B6%E5%AE%89%E6%8E%92%E4%BB%BB%E5%8A%A1.png)
 
 *图4｜规划 Agent 读取技术资料、检查输入条件，整理评价任务。*
 
 随后，Workflow 将任务分派给相应角色。GIS 工具执行阶段先筛选耕地、统一坐标系并关联土种资料，再进行栅格分区统计和指标赋值；各项指标转换为隶属度后，结合权重计算综合指数与质量等级。地图和报告在计算结果形成后继续制作。
 
-![评价任务分派与执行计划](../../素材/cc插件/正文配图/派发workflow.png)
+![评价任务分派与执行计划](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E6%B4%BE%E5%8F%91workflow.png)
 
 *图5｜Workflow 安排评价步骤及其依赖，并给出结果字段与核验要求。*
 
@@ -161,7 +161,7 @@ GIS MCP 服务通过内置 Python 工具、WhiteboxTools、GDAL 和 QGIS 承接�
 
 实际执行中也出现了中断。写入任务计划时，Hook 发现目标路径不在当前识别的工作空间范围内，拦截了 Bash 命令。这次提示暴露的是启动目录与输出目录之间的不一致：插件把数据所在子目录识别成了工作空间，计划却准备写入项目级 `02_WorkSpace`。路径边界在执行前给出了明确反馈，工作空间设置也因此成为排查的一部分。
 
-![Hook 对输出路径的检查](../../素材/cc插件/正文配图/hook拦截.png)
+![Hook 对输出路径的检查](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/hook%E6%8B%A6%E6%88%AA.png)
 
 *图6｜Hook 拦截路径范围不一致的写入命令，并返回允许的目录规则。*
 
@@ -173,29 +173,29 @@ GIS MCP 服务通过内置 Python 工具、WhiteboxTools、GDAL 和 QGIS 承接�
 
 五等地面积最多，为 645.75 公顷，占 30.17%；四等地与六等地分别占 17.93% 和 18.53%。等级统计给出全镇的数量分布，地图则进一步显示这些地块在哪里。
 
-![耕地质量评价统计结果](../../素材/cc插件/正文配图/评价结果.png)
+![耕地质量评价统计结果](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E8%AF%84%E4%BB%B7%E7%BB%93%E6%9E%9C.png)
 
 *图7｜本次评价的单元数量、面积与等级分布。*
 
 本次输出了耕地质量等级图，以及有机质、有效磷、速效钾、pH 四张性状分布图，每个主题均保留 PNG 与 JPG 文件。等级图呈现综合评价，性状图帮助读者查看具体指标的空间分布。下图将五张原始成果拼在一起，便于对照。
 
-![江屯镇耕地质量评价五图总览](../../素材/cc插件/正文配图/江屯镇耕地评价_五图总览.jpg)
+![江屯镇耕地质量评价五图总览](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E6%B1%9F%E5%B1%AF%E9%95%87%E8%80%95%E5%9C%B0%E8%AF%84%E4%BB%B7_%E4%BA%94%E5%9B%BE%E6%80%BB%E8%A7%88.jpg)
 
 *图8｜左侧为耕地质量等级图；右侧从上到下、从左到右依次为有机质、有效磷、速效钾和 pH 分布图。*
 
 统计表和报告接着承接这些结果。全镇等级面积、占比与主要指标统计写入表格；报告整理数据来源、评价方法、等级分布和指标情况。使用者可以先看图了解空间分布，再用表格核对数量，沿报告查找方法依据。
 
-![评价统计表](../../素材/cc插件/正文配图/统计表格.png)
+![评价统计表](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E7%BB%9F%E8%AE%A1%E8%A1%A8%E6%A0%BC.png)
 
 *图9｜全镇耕地质量等级面积、占比及主要指标统计。*
 
-![评价报告](../../素材/cc插件/正文配图/结果报告.png)
+![评价报告](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E7%BB%93%E6%9E%9C%E6%8A%A5%E5%91%8A.png)
 
 *图10｜评价报告将数据、方法和计算结果组织为可阅读的文档。*
 
 最终成果按四类保存：**文本成果、表格成果、图件成果、数据库成果**。数据库保留评价指标、隶属度、权重、综合指数和等级字段，便于继续查询或复核。本次已生成全镇等级统计；分地类、分行政村的等级交叉统计尚未补齐，粮食产能字段也按任务约定留空。
 
-![交付内容与指标清单](../../素材/cc插件/正文配图/交付指标与清单.png)
+![交付内容与指标清单](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/%E4%BA%A4%E4%BB%98%E6%8C%87%E6%A0%87%E4%B8%8E%E6%B8%85%E5%8D%95.png)
 
 *图11｜交付目录汇集报告、统计表、五类专题图和评价数据库。*
 
@@ -203,7 +203,7 @@ GIS MCP 服务通过内置 Python 工具、WhiteboxTools、GDAL 和 QGIS 承接�
 
 本次使用 DeepSeek，耗时 **4 小时 37 分钟**，统计 Token 总量为 **9,501,627**，其中包含缓存命中，统计费用为 **0.2084 美元**。
 
-![本次运行的Token与费用统计](../../素材/cc插件/正文配图/token消耗.png)
+![本次运行的Token与费用统计](https://raw.githubusercontent.com/Link-Tool/LinkToolImg/%E6%8F%92%E4%BB%B6%E7%B3%BB%E5%88%97/published/cc-plugin/20261017/token%E6%B6%88%E8%80%97.png)
 
 *图12｜本次测试的 Token 与费用统计，Token 总量包含缓存命中。*
 
